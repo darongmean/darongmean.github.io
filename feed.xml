@@ -5,56 +5,292 @@
     <description>The blog of Darong Mean</description>
     <link>https://darongmean.com/</link>
     <atom:link href="https://darongmean.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2016 20:15:32 +0700</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 20:15:32 +0700</lastBuildDate>
+    <pubDate>Sun, 27 Nov 2016 13:36:31 +0700</pubDate>
+    <lastBuildDate>Sun, 27 Nov 2016 13:36:31 +0700</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
-        <title>Notes of the week 2016W46: software design rules, anti-todo, and more...</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://news.bitofnews.com/forget-to-do-lists-what-you-really-need-are-not-to-do-lists/&quot;&gt;Forget To-Do Lists, What You Really Need Are Anti-To-Do Lists&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;When researching 11 companies that suddenly went from average to outstanding, Jobs found that the single binding factor between them was the shift in exactly how big decisions were made. The strategy became what not to do rather than what to do.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://martinfowler.com/bliki/BeckDesignRules.html&quot;&gt;BeckDesignRules&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;Kent Beck came up with his four rules of simple design while he was developing ExtremeProgramming in the late 1990’s. I express them like this.&lt;/p&gt;
+        <title>Weekly Roundup</title>
+        <description>&lt;p&gt;I’m working on how the weekly roundup should look like. At first glance, it should be the following format.&lt;/p&gt;
 
-      &lt;ul&gt;
-        &lt;li&gt;Passes the tests&lt;/li&gt;
-        &lt;li&gt;Reveals intention&lt;/li&gt;
-        &lt;li&gt;No duplication&lt;/li&gt;
-        &lt;li&gt;Fewest elements&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.podsnap.com/reductio.html&quot;&gt;Know when to fold ‘em: visualizing the streaming, concurrent reduce&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/why-deadlines-need-to-drop-dead-321739ae6be1#.jx8tsre6u&quot;&gt;Why Deadlines Need to Drop Dead&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;The best way to manage marketing calendars is to set   your marketing hype cycle one cycle behind your development cycle.&lt;/p&gt;
+&lt;h2 id=&quot;books&quot;&gt;Books&lt;/h2&gt;
 
-      &lt;p&gt;Market only finished products: No missed deadlines. No cut corners. No exploding products. No bad press.&lt;/p&gt;
+&lt;p&gt;TODO&lt;/p&gt;
 
-      &lt;p&gt;How do you answer “When will it ship?”
-“When it’s done.”&lt;/p&gt;
+&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
 
-      &lt;p&gt;Instead of “When will it ship?” the new questions are “what did we ship this week, and how do we want to market it?” Do you hold the new features behind a feature flag system and wait for a marketing calendar event to roll them out to the masses? Do you enable the features right away?&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://davidcel.is/posts/stop-validating-email-addresses-with-regex/&quot;&gt;Stop Validating Email Addresses With Regex&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;Just send them an email already&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/weekly-roundup/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/weekly-roundup/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Video: &quot;Design Sprint Explained in 1 Minute&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QwJwemOX37w&quot;&gt;Design Sprint Explained in 1 Minute&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Sat, 19 Nov 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/11/19/notes-of-the-week/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/11/19/notes-of-the-week/</guid>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-videos-Design-Sprint-Explained-in-1-Minute/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-videos-Design-Sprint-Explained-in-1-Minute/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Talk: &quot;The Future of Software Engineering&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great talk by &lt;code class=&quot;highlighter-rouge&quot;&gt;Mary Poppendieck&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6K4ljFZWgW8&quot;&gt;The Future of Software Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Slide is available at &lt;a href=&quot;https://gotocon.com/berlin-2016/presentations/show_talk.jsp?oid=7916&quot;&gt;Goto Conference&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Scale out » scale up&lt;/li&gt;
+  &lt;li&gt;Infrastructure as code&lt;/li&gt;
+  &lt;li&gt;The new technology stack&lt;/li&gt;
+  &lt;li&gt;Continous development pipeline&lt;/li&gt;
+  &lt;li&gt;Full-stack problem-solving teams&lt;/li&gt;
+  &lt;li&gt;Experimentation and learning&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-talks-The-Future-of-Software-Engineering/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-talks-The-Future-of-Software-Engineering/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Talk: &quot;On the Care and Feeding of Feedback Cycles&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great talk:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=91nAd6sLamI&quot;&gt;On the Care and Feeding of Feedback Cycles by Elisabeth Hendrickson&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Slide is availabe &lt;a href=&quot;http://flowcon.org/flowcon-sanfran-2013/presentation/On%20the%20Care%20and%20Feeding%20of%20Feedback%20Cycles&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes-and-hightlights&quot;&gt;Notes and Hightlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;work in small pieces&lt;/li&gt;
+  &lt;li&gt;integrate and test locally&lt;/li&gt;
+  &lt;li&gt;automate to eliminate wait states&lt;/li&gt;
+  &lt;li&gt;tighten feedback loops&lt;/li&gt;
+  &lt;li&gt;make feedback visible&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-talks-On-the-Care-and-Feeding-of-Feedback-Cycles/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-talks-On-the-Care-and-Feeding-of-Feedback-Cycles/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Talk: &quot;Functional Composition with Dependency Injection&quot;</title>
+        <description>&lt;p&gt;I’ve just read this great talk:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Slide is available at &lt;a href=&quot;https://speakerdeck.com/kumarshantanu/clojure-2016&quot;&gt;Functional Composition with Dependency Injection (IN/Clojure 2016)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Should a layer know about the underlying layer’s implementation detail(cache, connection pool)?&lt;/li&gt;
+  &lt;li&gt;What exactly is the “contract” between the caller and the underlying layer? Is the contract explicit?&lt;/li&gt;
+  &lt;li&gt;How do you test the service layer for failures? Can failures be simulated? Can tests be run in parallel?&lt;/li&gt;
+  &lt;li&gt;How easy is it to instrument or wrap an underlying layer implementation?(resilience, asynchrony etc…)&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-talks-Functional-Composition-with-Dependency-Injection/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-talks-Functional-Composition-with-Dependency-Injection/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Talk: &quot;Creating Maintainable Automated Acceptance Test Suites&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great talk:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=X9ap-zH0Gkc&quot;&gt;Creating Maintainable Automated Acceptance Test Suites&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Slide is availabe &lt;a href=&quot;http://www.slideshare.net/jezhumble/creating-maintainable-automated-acceptance-tests&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Principle 0: writing good acceptance tests is hard&lt;/li&gt;
+  &lt;li&gt;Principle 1: tests are first-class citizens of your project
+    &lt;ul&gt;
+      &lt;li&gt;treat code as production code&lt;/li&gt;
+      &lt;li&gt;refactor&lt;/li&gt;
+      &lt;li&gt;don’t repeat yourself&lt;/li&gt;
+      &lt;li&gt;don’t use record playback tools to build your suite&lt;/li&gt;
+      &lt;li&gt;separate intention from mechanics&lt;/li&gt;
+      &lt;li&gt;express the test as steps of a user’s journey[&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;]&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Principle 2: always interact with the system under test the same way as a user would
+    &lt;ul&gt;
+      &lt;li&gt;understand when behavior is asynchronous and account for it explicitly&lt;/li&gt;
+      &lt;li&gt;don’t use bare sleep: poll&lt;/li&gt;
+      &lt;li&gt;if it’s hard to write the test, you need to have a conversation with the team&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Principle 3: continuously curate the structure of your test suites
+    &lt;ul&gt;
+      &lt;li&gt;identify user journeys[&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;]&lt;/li&gt;
+      &lt;li&gt;most applications have &lt;strong&gt;very few distinct perosonas&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;most stories in iterative developments are &lt;strong&gt;enhancements&lt;/strong&gt; to existing journeys&lt;/li&gt;
+      &lt;li&gt;extract journeys[&lt;sup id=&quot;fnref:1:2&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;] from your acceptance tests&lt;/li&gt;
+      &lt;li&gt;make the journey tests fast and ran them first&lt;/li&gt;
+      &lt;li&gt;do &lt;strong&gt;test the most likely path&lt;/strong&gt; that the team, business and UX folk agree upon&lt;/li&gt;
+      &lt;li&gt;do &lt;strong&gt;not test every possible path&lt;/strong&gt; through the system&lt;/li&gt;
+      &lt;li&gt;extract negative tests and edge cases into a &lt;strong&gt;regression suite&lt;/strong&gt; which runs after your journey tests&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Principle 4: everyone owns acceptance tests
+    &lt;ul&gt;
+      &lt;li&gt;not all tests should call the external system&lt;/li&gt;
+      &lt;li&gt;paramterize connections to external systems&lt;/li&gt;
+      &lt;li&gt;run integration smoke tests before full acceptance suite&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;impersonator pattern&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;create a proxy from SUT to external system&lt;/li&gt;
+          &lt;li&gt;cache results from integration smoke tests&lt;/li&gt;
+          &lt;li&gt;periodically expire cache&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Principle 5: acceptance tests are responsible for managing their own test data
+    &lt;ul&gt;
+      &lt;li&gt;test-specific data&lt;/li&gt;
+      &lt;li&gt;test reference data&lt;/li&gt;
+      &lt;li&gt;application reference data&lt;/li&gt;
+      &lt;li&gt;ensure tests are independent&lt;/li&gt;
+      &lt;li&gt;don’t use production data dumps(except for performance testing and staging)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Footnote:&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;1: journey: the path a persona takes through the application to achieve an end goal &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:1:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-talks-Creating-Maintainable-Automated-Acceptance-Test-Suites/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-talks-Creating-Maintainable-Automated-Acceptance-Test-Suites/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Blog: &quot;Object Behavior Must Not Be Configurable&quot;</title>
+        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html&quot;&gt;Object Behavior Must Not Be Configurable&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-blogs-Object-Behavior-Must-Not-Be-Configurable/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-blogs-Object-Behavior-Must-Not-Be-Configurable/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Blog: &quot;HiddenPrecision&quot;</title>
+        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://martinfowler.com/bliki/HiddenPrecision.html&quot;&gt;HiddenPrecision&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hidden precision is a common problem with dates, because it’s sadly common to have a date creation function that actually provides an instant like this. It’s an example of poor naming, and indeed general poor modeling of dates and times.&lt;/li&gt;
+  &lt;li&gt;If you have a fractional currency part like cents, then usually it’s best to use integers on the fractional value, representing €5.00 with 500, preferably within a money type.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-blogs-HiddenPrecision/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-blogs-HiddenPrecision/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Blog: &quot;Did you know about ::keywords?&quot;</title>
+        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kotka.de/blog/2010/05/Did_you_know_III.html&quot;&gt;Did you know about ::keywords?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;…the double-colon form also allows for aliases! So all we have to do is set up a suitable alias for the namespace and we can save some serious typing.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-blogs-Did-you-know-about-keywords/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-blogs-Did-you-know-about-keywords/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Blog: &quot;Building and Motivating Engineering Teams&quot;</title>
+        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@skamille/building-and-motivating-engineering-teams-24fd56910039#.xsmtfnqun&quot;&gt;Building and Motivating Engineering Teams&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Respect that engineers are smart individuals who often have more to add to your business than just their coding talents, and teach them to respect that the other parts of the business have equally valuable skills and perspectives. Engineers don’t need to feel like the company royalty to be inspired to do good work, but they do need the opportunity to be treated like a partner.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/11/27/interesting-blogs-Building-and-Motivating-Engineering-Teams/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-blogs-Building-and-Motivating-Engineering-Teams/</guid>
         
         
       </item>
