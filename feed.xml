@@ -5,257 +5,399 @@
     <description>The blog of Darong Mean</description>
     <link>https://darongmean.com/</link>
     <atom:link href="https://darongmean.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Dec 2016 15:37:48 +0700</pubDate>
-    <lastBuildDate>Sat, 03 Dec 2016 15:37:48 +0700</lastBuildDate>
+    <pubDate>Sun, 11 Dec 2016 18:37:49 +0700</pubDate>
+    <lastBuildDate>Sun, 11 Dec 2016 18:37:49 +0700</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
-        <title>Weekly Roundup</title>
-        <description>&lt;p&gt;It’s been a procrastinated week. I have to pick myself up and get jobs done next week.&lt;/p&gt;
-
-&lt;h2 id=&quot;books&quot;&gt;Books&lt;/h2&gt;
+        <title>Interesting Video: &quot;Variants are Not Unions&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video by Jeanine Adkisson:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The Power of Now: Chapter 1&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ZQkIWWTygio&quot;&gt;Variants are Not Unions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Learn to build custom text editor&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 03 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/03/weekly-roundup/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/03/weekly-roundup/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Video: &quot;The Entity Microservice Trap You May Be Doing It Wrong&quot;</title>
-        <description>&lt;p&gt;I’ve just watched this great video:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vs_XiP5Lkgg&quot;&gt;The Entity Microservice Trap You May Be Doing It Wrong&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Slide is available &lt;a href=&quot;https://gotocon.com/chicago-2016/presentation/The%20Entity%20Microservice%20Trap%20-%20You%20May%20be%20Doing%20it%20Wrong&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Get the data structures correct, and the code will write itself&lt;/code&gt; – Fred Brook’s Design Approach&lt;/li&gt;
-  &lt;li&gt;Where do you put the business logic?&lt;/li&gt;
-  &lt;li&gt;The &lt;strong&gt;Cynefin Framework&lt;/strong&gt;: simple(cause -&amp;gt; effect), complicated(cause -&amp;gt;-&amp;gt;-&amp;gt; effect), complex(cause ? effect), and chaotic(effect? cause?)&lt;/li&gt;
-  &lt;li&gt;Breaking up monoliths:
-    &lt;ol&gt;
-      &lt;li&gt;break DB apart&lt;/li&gt;
-      &lt;li&gt;create behavior-oriented services&lt;/li&gt;
-    &lt;/ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;lightweight data type in Clojure&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Use event bus&lt;/li&gt;
-  &lt;li&gt;One service = business logic + solution collecting + event publishing + 300ms responder&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 03 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/03/interesting-videos-The-Entity-Microservice-Trap-You-May-Be-Doing-It-Wrong/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/03/interesting-videos-The-Entity-Microservice-Trap-You-May-Be-Doing-It-Wrong/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Video: &quot;Connascence Examined&quot;</title>
-        <description>&lt;p&gt;I’ve just watched this great video by Jim Weirich:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=HQXVKHoUQxY&quot;&gt;Connascence Examined&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
-
-&lt;p&gt;Connascence (noun) is defined as&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;the common birth of two or more at the same tome; production of two or more together,&lt;/li&gt;
-  &lt;li&gt;that which is born or produced with another, or&lt;/li&gt;
-  &lt;li&gt;the act of growing together.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In software, connascence is a rough measurement of the amount of coupling amount the components of a software system. Components that are “born” together will often need to change together over time. Excessive connascence in our software means that the system is hard to change and hard to maintain.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 03 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/03/interesting-videos-Connascence-Examined/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/03/interesting-videos-Connascence-Examined/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Video: &quot;ClojureScript and optimized C&quot;</title>
-        <description>&lt;p&gt;I’ve just watched this great video:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=LopU-kMpe8I&quot;&gt;ClojureScript and optimized C&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Showing a calculation where ClojureScript runs at the same speed as optimized C.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 03 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/03/interesting-videos-ClojureScript-and-optimized-C/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/03/interesting-videos-ClojureScript-and-optimized-C/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Blog: &quot;Your Social Media Fingerprint&quot;</title>
-        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://robinlinus.github.io/socialmedia-leak/&quot;&gt;Your Social Media Fingerprint&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
-
-&lt;p&gt;We can use this URL in an &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag in our website:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Ffavicon.ico&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;This &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag’s property:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Logged in:   receives the favicon image, will load it successfully, and the onLoad callback will be fired.&lt;/li&gt;
-  &lt;li&gt;Logged out: receives the HTML of the login screen, will fail to load it as an image, and the onError callback will be fired.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 03 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/03/interesting-blogs-Your-Social-Media-Fingerprint/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/03/interesting-blogs-Your-Social-Media-Fingerprint/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Blog: &quot;Maybe the Cookies API should not exist&quot;</title>
-        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tech.noredink.com/post/147676730053/maybe-the-cookies-api-should-not-exist&quot;&gt;Maybe the Cookies API should not exist&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;As far as I can tell, the only usage that really makes sense is the following scenario:
-    &lt;blockquote&gt;
-      &lt;p&gt;A user comes to your website http://mail.example.com and you want to serve them their inbox immediately, no sign in necessary.&lt;/p&gt;
-    &lt;/blockquote&gt;
+  &lt;li&gt;loop variant
+    &lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:stop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret-val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:recur&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recur-val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Based on a unique identifier, you can look up things like theme from your database and send back the appropriately styled HTML. Basically, &lt;strong&gt;any other information can be derived from a unique ID.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;result variant
+    &lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:ok&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:err&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
-        <pubDate>Sat, 03 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/03/interesting-blogs-Maybe-the-Cookies-API-should-not-exist/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/03/interesting-blogs-Maybe-the-Cookies-API-should-not-exist/</guid>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Variants-are-Not-Unions/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Variants-are-Not-Unions/</guid>
         
         
       </item>
     
       <item>
-        <title>Interesting Blog: &quot;How Elm Slays a UI Antipattern&quot;</title>
-        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
+        <title>Interesting Video: &quot;Types As Design Tools&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video by Kris Jenkins:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.jenkster.com/2016/06/how-elm-slays-a-ui-antipattern.html&quot;&gt;How Elm Slays a UI Antipattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6mUAvd6i4OU&quot;&gt;Types As Design Tools&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Now, how can we fix this? Discipline? Linters? More unit tests? A QA army? No! Let’s &lt;strong&gt;fix the data model&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Listen to your types, they are telling you things that improve your model&lt;/li&gt;
+  &lt;li&gt;Constraint possibilities&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Types-As-Design-Tools/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Types-As-Design-Tools/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Video: &quot;Spec-ulation&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video by Rich Hickey:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oyLBGkS5ICk&quot;&gt;Spec-ulation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Changes in software:
+    &lt;ul&gt;
+      &lt;li&gt;What is &lt;strong&gt;required&lt;/strong&gt;?
+        &lt;ul&gt;
+          &lt;li&gt;fn - args&lt;/li&gt;
+          &lt;li&gt;ns - var names&lt;/li&gt;
+          &lt;li&gt;artifact - ns/package names/paths&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;What is &lt;strong&gt;provided&lt;/strong&gt;?
+        &lt;ul&gt;
+          &lt;li&gt;fn - ret (proc/service effect)&lt;/li&gt;
+          &lt;li&gt;ns - vars/fns&lt;/li&gt;
+          &lt;li&gt;artifact - namespaces/packages&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Change is one of two things: Growth or Breakage&lt;/li&gt;
+  &lt;li&gt;Grow your software
+    &lt;ul&gt;
+      &lt;li&gt;accretion: provide more&lt;/li&gt;
+      &lt;li&gt;relaxation: require less&lt;/li&gt;
+      &lt;li&gt;fixation: bash bugs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Break your software
+    &lt;ul&gt;
+      &lt;li&gt;require more&lt;/li&gt;
+      &lt;li&gt;provide less&lt;/li&gt;
+      &lt;li&gt;unrelated stuff under same name&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Breaking changes are broken.
+    &lt;ul&gt;
+      &lt;li&gt;Don’t do it&lt;/li&gt;
+      &lt;li&gt;Don’t try to figure out the best way to do it&lt;/li&gt;
+      &lt;li&gt;Avoid breakage by turning it into &lt;strong&gt;accretion&lt;/strong&gt;: old and new can co-exist&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Recognizing collections:
+    &lt;ul&gt;
+      &lt;li&gt;you only &lt;code class=&quot;highlighter-rouge&quot;&gt;change&lt;/code&gt; a collection by adding/removing members&lt;/li&gt;
+      &lt;li&gt;adding = growth, removing = breakage&lt;/li&gt;
+      &lt;li&gt;namespaces: collections of vars/fns&lt;/li&gt;
+      &lt;li&gt;artifacts: collections of namespaces/packages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Might just as well change the name
+    &lt;ul&gt;
+      &lt;li&gt;requiring more args? providing less on return? &lt;strong&gt;create a new function&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;providing fewer fns? vars? &lt;strong&gt;create a new namepsace/package&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;providing fewer namespaces/packages? &lt;strong&gt;create new artifactId&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;namespace is part of the name, ns aliases can ease transitions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SemVer is broken, what instead?
+    &lt;ul&gt;
+      &lt;li&gt;chronological versioning?(YYYYMMDD.HHMMSS)&lt;/li&gt;
+      &lt;li&gt;anything that conveys more and supports some forms of relativism&lt;/li&gt;
+      &lt;li&gt;Git SHAs?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What about iterative development?
+    &lt;ul&gt;
+      &lt;li&gt;Alphas are ok: if people are using your alphas, they want to be part of your standup&lt;/li&gt;
+      &lt;li&gt;incremental API publishing?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What about web services?
+    &lt;ul&gt;
+      &lt;li&gt;same problems&lt;/li&gt;
+      &lt;li&gt;web service is collection of operations&lt;/li&gt;
+      &lt;li&gt;operations require/provide&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;accretion&lt;/strong&gt; could prevent a lot of client/service version hell&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Coding for growth
+    &lt;ul&gt;
+      &lt;li&gt;Open specs and data formats are key&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt; are about what you can do, not about what you can’t&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Always presume you might be handed more than what you need or know about: ignore or have policy for it&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Why don’t you let me say “disallowing any other keys in maps”?&lt;/p&gt;
+
+  &lt;p&gt;…most logic systems don’t have…something that say “and nothing else will ever be true”…&lt;/p&gt;
+
+  &lt;p&gt;…the reason why they don’t have it is you can do no good logic with that system, you never ever know or calculate anything you didn’t know on the very first day…&lt;/p&gt;
+
+  &lt;p&gt;…so you can’t let you know your checking problem dominate your &lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt;, that’s not what &lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt; is for… you could make something with &lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt; that could do that extra thing, don’t put that in your &lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt;, that’s not your public thing. You want to add another layer of &lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt; that they like shut down stuff or run an additional check to help people detect erros or something like that, that’s fine. But don’t put it in your primary public &lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt;…&lt;/p&gt;
+
+  &lt;p&gt;…your primary public &lt;code class=&quot;highlighter-rouge&quot;&gt;Specs&lt;/code&gt; should be oriented toward growth…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Spec-ulation-Keynote/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Spec-ulation-Keynote/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Video: &quot;Making Impossible States Impossible&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video by Richard Feldman:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=IcgmSRJHu_8&quot;&gt;Making Impossible States Impossible&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;using zip list to represent model history data&lt;/li&gt;
+  &lt;li&gt;using union type&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sat, 03 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/03/interesting-blogs-How-Elm-Slays-a-UI-Antipattern/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/03/interesting-blogs-How-Elm-Slays-a-UI-Antipattern/</guid>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Making-Impossible-States-Impossible/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Making-Impossible-States-Impossible/</guid>
         
         
       </item>
     
       <item>
-        <title>Weekly Roundup</title>
-        <description>&lt;p&gt;I’m working on how the weekly roundup should look like. At first glance, it should be the following format.&lt;/p&gt;
+        <title>Interesting Video: &quot;Hoplon and Javelin, WebDev Alternate Reality&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video by Micha Niskin:&lt;/p&gt;
 
-&lt;h2 id=&quot;books&quot;&gt;Books&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=UoZyyo2Bwr8&quot;&gt;Hoplon and Javelin, WebDev Alternate Reality&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;TODO&lt;/p&gt;
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
 
-&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
-
-&lt;p&gt;TODO&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bundles atom/cells into a library?&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
-        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/11/27/weekly-roundup/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/11/27/weekly-roundup/</guid>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Hoplon-and-Javelin,-WebDev-Alternate-Reality/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Hoplon-and-Javelin,-WebDev-Alternate-Reality/</guid>
         
         
       </item>
     
       <item>
-        <title>Interesting Video: &quot;Design Sprint Explained in 1 Minute&quot;</title>
+        <title>Interesting Video: &quot;Getting Real Value out of your Planning Efforts with Story Mapping&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video by Jesper Boeg:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=c4_PvSXZssc&quot;&gt;Getting Real Value out of your Planning Efforts with Story Mapping&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;p&gt;Story mapping in short:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;create product vision&lt;/li&gt;
+  &lt;li&gt;identify “backbone” activities&lt;/li&gt;
+  &lt;li&gt;identify target groups/user segments&lt;/li&gt;
+  &lt;li&gt;walk the “backbone” with each role&lt;/li&gt;
+  &lt;li&gt;prioritize (walking skeleton, release goal)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A vision is important, if applicable try this format for vision statement:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FOR&lt;/strong&gt; (target for the product)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WHO&lt;/strong&gt; (users’ needs)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OUR PRODUCT IS&lt;/strong&gt; (the product category)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;THAT&lt;/strong&gt; (major benefit, key functionalities)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UNLIKE&lt;/strong&gt; (current practice, competition)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OUR PRODUCT&lt;/strong&gt; (major differentiator)&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Getting-Real-Value-out-of-your-Planning-Efforts-with-Story-Mapping/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Getting-Real-Value-out-of-your-Planning-Efforts-with-Story-Mapping/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Video: &quot;Dont Lose the Big Picture&quot;</title>
         <description>&lt;p&gt;I’ve just watched this great video:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QwJwemOX37w&quot;&gt;Design Sprint Explained in 1 Minute&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=p8D1O64-bKc&quot;&gt;Don’t Lose the Big Picture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;p&gt;It’s about what user do, not what features the software have.&lt;/p&gt;
+
 </description>
-        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/11/27/interesting-videos-Design-Sprint-Explained-in-1-Minute/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-videos-Design-Sprint-Explained-in-1-Minute/</guid>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Dont-Lose-the-Big-Picture/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Dont-Lose-the-Big-Picture/</guid>
         
         
       </item>
     
       <item>
-        <title>Interesting Talk: &quot;The Future of Software Engineering&quot;</title>
-        <description>&lt;p&gt;I’ve just watched this great talk by &lt;code class=&quot;highlighter-rouge&quot;&gt;Mary Poppendieck&lt;/code&gt;:&lt;/p&gt;
+        <title>Interesting Video: &quot;Contracts &amp; Clojure: The Best-Yet Compromise of Types and Tests&quot;</title>
+        <description>&lt;p&gt;I’ve just watched this great video by Jessica Kerr:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6K4ljFZWgW8&quot;&gt;The Future of Software Engineering&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=GFQqyXoL0YQ&quot;&gt;Contracts &amp;amp; Clojure: The Best-Yet Compromise of Types and Tests&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Slide is available at &lt;a href=&quot;https://gotocon.com/berlin-2016/presentations/show_talk.jsp?oid=7916&quot;&gt;Goto Conference&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Scale out » scale up&lt;/li&gt;
-  &lt;li&gt;Infrastructure as code&lt;/li&gt;
-  &lt;li&gt;The new technology stack&lt;/li&gt;
-  &lt;li&gt;Continous development pipeline&lt;/li&gt;
-  &lt;li&gt;Full-stack problem-solving teams&lt;/li&gt;
-  &lt;li&gt;Experimentation and learning&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;Generative testing with schema&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
-        <pubDate>Sun, 27 Nov 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/11/27/interesting-talks-The-Future-of-Software-Engineering/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/11/27/interesting-talks-The-Future-of-Software-Engineering/</guid>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-videos-Contracts-&-Clojure-The-Best-Yet-Compromise-of-Types-and-Tests/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-videos-Contracts-&-Clojure-The-Best-Yet-Compromise-of-Types-and-Tests/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Paper: &quot;Fail Fast&quot;</title>
+        <description>&lt;p&gt;I’ve just read this great paper by Jim Shore:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;Fail Fast&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;p&gt;Failing fast is a nonintuitive technique: “failing immediately and visibly” sounds like it would make your software more fragile, but it actually makes it more robust. Bugs are easier to find and fix, so fewer go into production.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;For example, consider a method that reads a property from a configuration file. What should happen when the property isn’t present? A common approach is to return null or a default value.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In contrast, a program that fails fast will throw an exception.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Assertions&lt;/strong&gt; are the key to failing fast. An assertion is a tiny piece of code that checks a condition
+and then fails if the condition isn’t met. So, when something starts to go wrong, an assertion detects the problem and makes it visible.&lt;/p&gt;
+
+&lt;p&gt;…it’s tough to know when to add assertions. One way to tell is to look for comments. Comments often document assumptions about how a piece of code works or how it should be called. When you see those comments, or feel like writing one, &lt;strong&gt;think about how you can turn it into an assertion instead&lt;/strong&gt;. When you’re writing a method, avoid writing assertions for problems in the method itself.&lt;/p&gt;
+
+&lt;p&gt;Think about what kinds of defects are possible and how they occur. Place your assertions so that the software fails earlier—close to the original problem—making the problem easy to find. What kinds of problems are common in your code and how can you use assertions to make them easy to fix?&lt;/p&gt;
+
+&lt;p&gt;When writing an assertion, think about what kind of information you’ll need to fix the problem if the assertion fails. Include that information in the assertion message. Don’t just repeat the assertion’s condition; the stack trace will lead to that. Instead, put the error in context.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You don’t need to go overboard when writing assertion messages. Assertions are for programmers, so they don’t need to be user friendly, just informative.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you use a &lt;strong&gt;global exception handler&lt;/strong&gt;, avoid catch-all exception handlers in the rest of your application. They’ll prevent exceptions from reaching your global handler. Also, when you use resources that have to be closed (such as files), be sure to use finally blocks or using statements (in C#) to clean them up. This way, if an exception occurs, the application will be returned to a fresh, working state.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-papers-fail-fast/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-papers-fail-fast/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Interesting Blog: &quot;User story mapping&quot;</title>
+        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rthewitt.com/2015/12/05/user-story-mapping/&quot;&gt;User story mapping&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can this be applied to any type of product?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I think so. Provided it has end users. I’ve applied the technique to a feature which allowed users to sync their favourite items. On the surface of it, the feature was essentially a read/write capability – but we were able to convey it as a set of user tasks.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Would you ever create multiple user story maps for one product?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I have never done this. If your product is the Amazon website then you may need multiple maps – but hopefully your product isn’t that large.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Are there any downsides?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The user story map doesn’t replace your requirements/JIRA tickets. It’s essentially a way to visualise them within the context of the roadmap. As the system changes you’ll need to update the USM as well as your requirements/JIRA. As such, it’s a product artefact that needs maintaining.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What if you have no idea what the product is?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The technique generally assumes there is a product vision around which to hang these tasks/stories. If you have very little idea about the new product (e.g. “we want to build a page on the website where users can see things that most interest them”) then you can still use this technique. I’d recommend some form of upfront thought about what you want that page to do by the product team &amp;amp; a warm up activity for the group before step 2 (e.g. crazy 8’s).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Aren’t user tasks just another type of user story?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;User tasks can be thought of as high-level user stories e.g. “searching for a product“ is a task that can include multiple user stories (search by keyword, search by shoe size, filter by brand, search by colour). The essence of activities vs tasks vs stories is that they’re hierarchical user needs. Exactly what they are depends on what product you build.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 11 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/11/interesting-blogs-User-story-mapping/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/11/interesting-blogs-User-story-mapping/</guid>
         
         
       </item>
