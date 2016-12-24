@@ -5,8 +5,8 @@
     <description>The blog of Darong Mean</description>
     <link>https://darongmean.com/</link>
     <atom:link href="https://darongmean.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Dec 2016 14:03:53 +0700</pubDate>
-    <lastBuildDate>Sat, 24 Dec 2016 14:03:53 +0700</lastBuildDate>
+    <pubDate>Sat, 24 Dec 2016 14:12:28 +0700</pubDate>
+    <lastBuildDate>Sat, 24 Dec 2016 14:12:28 +0700</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -169,7 +169,7 @@
 
 &lt;p&gt;Short software half-life pattern: how long half the code you are working on will change?&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;try to keep it short: be able to delete code. Google changes half the code every month.&lt;/li&gt;
+  &lt;li&gt;try to keep it short: be able to delete code. &lt;a href=&quot;http://infiniteundo.com/post/71540519157/continuous-delivery-is-mainstream&quot;&gt;Google changes half the code every month&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;small, separate components, each component does one thing: can fit in my head&lt;/li&gt;
   &lt;li&gt;hard shell, soft center&lt;/li&gt;
   &lt;li&gt;the message is the API. the event is the API, in DDD.&lt;/li&gt;
