@@ -5,9 +5,190 @@
     <description>The blog of Darong Mean</description>
     <link>https://darongmean.com/</link>
     <atom:link href="https://darongmean.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Dec 2016 14:12:28 +0700</pubDate>
-    <lastBuildDate>Sat, 24 Dec 2016 14:12:28 +0700</lastBuildDate>
+    <pubDate>Thu, 20 Apr 2017 13:47:49 +0700</pubDate>
+    <lastBuildDate>Thu, 20 Apr 2017 13:47:49 +0700</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>How to use boot-clj and nREPL with Docker</title>
+        <description>&lt;p&gt;There’s a great post about &lt;a href=&quot;http://blog.dominic.io/vagrant-docker-and-clojure/&quot;&gt;using clojure with docker.&lt;/a&gt; I followed the post with a twist. I used &lt;code class=&quot;highlighter-rouge&quot;&gt;boot-alpine&lt;/code&gt; image[&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;] and &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;Vagrant&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s the final configuration that worked.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;file &lt;code class=&quot;highlighter-rouge&quot;&gt;build.boot&lt;/code&gt;
+    &lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;; file build.boot
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deftask&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;development&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;task-options!&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cljs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:optimizations&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:none&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:source-map&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;       &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:compiler-options&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:devcards&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start-repl&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:ip&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.0.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9007&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cljs-repl&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:nrepl-opts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:bind&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.0.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reload&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:on-jsload&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;'timer.app/reload&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9011&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;identity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;file &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt;
+    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# file docker-compose.yml&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;bootclj&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;boot dev&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;clojure:boot-alpine&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;9007:9007&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;9009:9009&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;9011:9011&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;3000:3000&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;volumes_from&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;m2&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;working_dir&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/opt/src&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;m2&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo &quot;m2 container ready!&quot;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;alpine&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/root/.m2&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./:/opt/src&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;challenges-i-faced&quot;&gt;Challenges I faced&lt;/h3&gt;
+
+&lt;p&gt;Being a beginner in both boot-clj and Docker, I bumped into the following issues.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I couldn’t connect to nREPL running in Docker[&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;].&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I got the following error when I used Cursive remote repl to connect.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Connecting to remote nREPL server...
+Error connecting to localhost:9009 - class java.net.ConnectException: Connection refused
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;By going through document and looking at the source code[&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;], I found out that I need to run two tasks to have browser repl working. The task &lt;code class=&quot;highlighter-rouge&quot;&gt;cljs-repl&lt;/code&gt; starts a repl server and the task &lt;code class=&quot;highlighter-rouge&quot;&gt;start-repl&lt;/code&gt; connects the repl server to browser.&lt;/p&gt;
+
+&lt;p&gt;The repl server listens to loopback interface[&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;] by default. I used the &lt;code class=&quot;highlighter-rouge&quot;&gt;bind&lt;/code&gt; nrepl option to override this setting like the following:&lt;/p&gt;
+&lt;div class=&quot;language-clojure highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cljs-repl&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:nrepl-opts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:bind&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.0.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;:port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9009&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Boot downloaded dependencies everytime I rebuilt docker images.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I used data container to store &lt;code class=&quot;highlighter-rouge&quot;&gt;.m2&lt;/code&gt; repositories. I just use the following command to rebuild and start the image:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose stop bootclj 
+docker-compose rm bootclj
+docker-compose create bootclj
+docker-compose start bootclj
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Footnote:&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;1: &lt;a href=&quot;https://hub.docker.com/_/clojure/&quot;&gt;link to official Docker image for Clojure&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;2: &lt;code class=&quot;highlighter-rouge&quot;&gt;adzerk/boot-cljs-repl&lt;/code&gt; version &lt;code class=&quot;highlighter-rouge&quot;&gt;0.3.3&lt;/code&gt; is used in this post &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;3: &lt;a href=&quot;https://github.com/adzerk-oss/boot-cljs-repl/blob/master/src/adzerk/boot_cljs_repl.clj#L204&quot;&gt;boot_cljs_repl.clj&lt;/a&gt; and &lt;a href=&quot;https://github.com/boot-clj/boot/blob/2.6.0/boot/core/src/boot/task/built_in.clj#L371&quot;&gt;built_in.clj&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;4: &lt;a href=&quot;https://clojure.org/reference/repl_and_main#_launching_a_socket_server&quot;&gt;https://clojure.org/reference/repl_and_main#_launching_a_socket_server&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 20 Apr 2017 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2017/04/20/how-to-use-boot-clj-and-nrepl-with-docker/</link>
+        <guid isPermaLink="true">https://darongmean.com/2017/04/20/how-to-use-boot-clj-and-nrepl-with-docker/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</title>
+        <description>&lt;p&gt;I’ve got interested into flame graph and gone through an excellent post &lt;a href=&quot;http://psy-lob-saw.blogspot.com/2017/02/flamegraphs-intro-fire-for-everyone.html&quot;&gt;Java Flame Graphs Introduction: Fire For Everyone!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I tried the following script:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1..100&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do
+  &lt;/span&gt;jstack &amp;lt;pid&amp;gt; &amp;gt;&amp;gt; iloveoldshit.jstk;
+  sleep 0.1;
+&lt;span class=&quot;k&quot;&gt;done
+&lt;/span&gt;cat iloveoldshit.jstk | ./stackcollapse-jstack.pl | ./flamegraph.pl --color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;green &amp;gt; jstack-flames.svg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;and get the following error:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ERROR: No stack counts found
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Being a beginner, I don’t know what happened. So I decided to go through source code. It turned out that &lt;code class=&quot;highlighter-rouge&quot;&gt;stackcollapse-jstack.pl&lt;/code&gt; filter out some stacks[&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;] with names like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;C. CompilerThread&lt;/li&gt;
+  &lt;li&gt;Signal Dispatcher&lt;/li&gt;
+  &lt;li&gt;Service Thread&lt;/li&gt;
+  &lt;li&gt;Attach Listener&lt;/li&gt;
+  &lt;li&gt;epollWait&lt;/li&gt;
+  &lt;li&gt;socketAccept&lt;/li&gt;
+  &lt;li&gt;Socket.*accept0&lt;/li&gt;
+  &lt;li&gt;socketRead0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I run jstack against an idle tomcat. The dump was full of stacks that get filtered out by the script and &lt;code class=&quot;highlighter-rouge&quot;&gt;stackcollapse-jstack.pl&lt;/code&gt; returned an empty output.&lt;/p&gt;
+
+&lt;p&gt;I managed to get it working by running jstack against a tomcat that’s handling requests.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Footnote&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;1:&lt;a href=&quot;https://github.com/brendangregg/FlameGraph/blob/master/stackcollapse-jstack.pl#L128&quot;&gt;https://github.com/brendangregg/FlameGraph/blob/master/stackcollapse-jstack.pl#L128&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 16 Apr 2017 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2017/04/16/challenges-java-flame-graphs-introduction/</link>
+        <guid isPermaLink="true">https://darongmean.com/2017/04/16/challenges-java-flame-graphs-introduction/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Books I Read (2016)</title>
+        <description>&lt;p&gt;November&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Phoenix Project&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;December&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Power of Now - A guide to spiritual enlightenment&lt;/li&gt;
+  &lt;li&gt;Are Your Lights On? - How to Know What The Problem Really Is&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 31 Dec 2016 00:00:00 +0700</pubDate>
+        <link>https://darongmean.com/2016/12/31/books-i-read/</link>
+        <guid isPermaLink="true">https://darongmean.com/2016/12/31/books-i-read/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Weekly Roundup</title>
@@ -220,71 +401,6 @@
         <pubDate>Sat, 24 Dec 2016 00:00:00 +0700</pubDate>
         <link>https://darongmean.com/2016/12/24/interesting-videos-Coding-Culture/</link>
         <guid isPermaLink="true">https://darongmean.com/2016/12/24/interesting-videos-Coding-Culture/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Video: &quot;Beyond Features&quot;</title>
-        <description>&lt;p&gt;I’ve just watched this great video by Dan North:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=lz5HBtDl-1A&quot;&gt;Beyond Features&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Beyond &lt;em&gt;software engineering&lt;/em&gt; towards &lt;strong&gt;software surgery&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Beyond &lt;em&gt;programming&lt;/em&gt; towards &lt;strong&gt;business impact&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Beyond &lt;em&gt;cutting&lt;/em&gt; towards &lt;strong&gt;curing&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 24 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/24/interesting-videos-Beyond-Features/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/24/interesting-videos-Beyond-Features/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Blog: &quot;Unidirectional User Interface Architectures&quot;</title>
-        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://staltz.com/unidirectional-user-interface-architectures.html&quot;&gt;Unidirectional User Interface Architectures&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;notes-and-highlights&quot;&gt;Notes and Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Flux&lt;/li&gt;
-  &lt;li&gt;Redux&lt;/li&gt;
-  &lt;li&gt;Behavior-Event-State-Tree (BEST)&lt;/li&gt;
-  &lt;li&gt;The Elm Architecture&lt;/li&gt;
-  &lt;li&gt;Model-View-Intent (RxJs)&lt;/li&gt;
-  &lt;li&gt;Nested Dialogues&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 24 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/24/interesting-blogs-UNIDIRECTIONAL-USER-INTERFACE-ARCHITECTURES/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/24/interesting-blogs-UNIDIRECTIONAL-USER-INTERFACE-ARCHITECTURES/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Interesting Blog: &quot;Designing a User Friendly Java Library&quot;</title>
-        <description>&lt;p&gt;I’ve just read this great blog:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.baeldung.com/design-a-user-friendly-java-library&quot;&gt;Designing a User Friendly Java Library&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 24 Dec 2016 00:00:00 +0700</pubDate>
-        <link>https://darongmean.com/2016/12/24/interesting-blogs-Designing-a-User-Friendly-Java-Library/</link>
-        <guid isPermaLink="true">https://darongmean.com/2016/12/24/interesting-blogs-Designing-a-User-Friendly-Java-Library/</guid>
         
         
       </item>
