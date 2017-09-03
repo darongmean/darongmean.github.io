@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Darong Mean</title>
+    <link>https://darongmean.com/</link>
+    <description>Recent content on Darong Mean</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://darongmean.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to use boot-clj and nREPL with Docker</title>
+      <link>https://darongmean.com/how-to-use-boot-clj-and-nrepl-with-docker/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/how-to-use-boot-clj-and-nrepl-with-docker/</guid>
+      <description>There&amp;rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
+Here&amp;rsquo;s the final configuration that worked.
+# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &amp;quot;m2 container ready!&amp;quot; image: alpine volumes: - /root/.m2 - .</description>
+    </item>
+    
+    <item>
+      <title>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</title>
+      <link>https://darongmean.com/challenges-java-flame-graphs-introduction/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/challenges-java-flame-graphs-introduction/</guid>
+      <description>I&amp;rsquo;ve got interested into flame graph and gone through an excellent post Java Flame Graphs Introduction: Fire For Everyone!
+I tried the following script:
+for i in {1..100}; do jstack &amp;lt;pid&amp;gt; &amp;gt;&amp;gt; iloveoldshit.jstk; sleep 0.1; done cat iloveoldshit.jstk | ./stackcollapse-jstack.pl | ./flamegraph.pl --color=green &amp;gt; jstack-flames.svg  and get the following error:
+ERROR: No stack counts found  Being a beginner, I don&amp;rsquo;t know what happened. So I decided to go through source code.</description>
+    </item>
+    
+    <item>
+      <title>Books I Read (2016)</title>
+      <link>https://darongmean.com/books-i-read-2016/</link>
+      <pubDate>Sat, 31 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/books-i-read-2016/</guid>
+      <description> November  The Phoenix Project  December  The Power of Now - A guide to spiritual enlightenment Are Your Lights On? - How to Know What The Problem Really Is  </description>
+    </item>
+    
+    <item>
+      <title>Weekly Roundup 2016/12/24</title>
+      <link>https://darongmean.com/weekly-roundup-2016-12-24/</link>
+      <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/weekly-roundup-2016-12-24/</guid>
+      <description> Books  The Power of Now: Chapter 2 Are your lights on? Chapter 9  </description>
+    </item>
+    
+    <item>
+      <title>Weekly Roundup 2016/12/03</title>
+      <link>https://darongmean.com/weekly-roundup-2016-12-03/</link>
+      <pubDate>Sat, 03 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/weekly-roundup-2016-12-03/</guid>
+      <description> It&amp;rsquo;s been a procrastinated week. I have to pick myself up and get jobs done next week.
+Books  The Power of Now: Chapter 1  Projects  Learn to build custom text editor  </description>
+    </item>
+    
+    <item>
+      <title>Weekly Roundup 2016/11/27</title>
+      <link>https://darongmean.com/weekly-roundup-2016-11-27/</link>
+      <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/weekly-roundup-2016-11-27/</guid>
+      <description>I&amp;rsquo;m working on how the weekly roundup should look like. At first glance, it should be the following format.
+Books TODO
+Projects TODO</description>
+    </item>
+    
+    <item>
+      <title>Weekly Roundup 2016/11/19</title>
+      <link>https://darongmean.com/weekly-roundup-2016-11-19/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/weekly-roundup-2016-11-19/</guid>
+      <description>Forget To-Do Lists, What You Really Need Are Anti-To-Do Lists   When researching 11 companies that suddenly went from average to outstanding, Jobs found that the single binding factor between them was the shift in exactly how big decisions were made. The strategy became what not to do rather than what to do.
+  BeckDesignRules   Kent Beck came up with his four rules of simple design while he was developing ExtremeProgramming in the late 1990&amp;rsquo;s.</description>
+    </item>
+    
+  </channel>
+</rss>
