@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://darongmean.com/401-vs-403/</loc>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darongmean.com/deal-with-liferay-friendly-url-mapping/</loc>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darongmean.com/git-working-with-deleted-files/</loc>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darongmean.com/html-anchor-target-attribute/</loc>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darongmean.com/hell-with-java-autobox-or-why-not-use-instanceof/</loc>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darongmean.com/naming-convention/</loc>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darongmean.com/sum-type-or-union-type/</loc>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darongmean.com/about/</loc>
     <lastmod>2017-09-02T14:31:13+07:00</lastmod>
   </url>
@@ -54,13 +89,13 @@
   
   <url>
     <loc>https://darongmean.com/</loc>
-    <lastmod>2017-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darongmean.com/posts/</loc>
-    <lastmod>2017-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
