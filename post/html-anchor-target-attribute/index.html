@@ -4,20 +4,22 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
+<meta name='description' content='http://stackoverflow.com/a/8867079
+Using target=”_blank” will instruct the browser to create a new browser tab or window when the user clicks on the link.
+Using target=”_new” is technically invalid according to the specifications, but as far as I know every browser will behave the same way: - it will search for a tab or window with the context name “_new” - if a “_new” tab/window is found, then the URL is loaded into it - if it’s not found, a new tab/window is created with the context name “_new”, and the URL loaded into it'>
 
-<meta property='og:title' content='Darong Mean'>
-<meta property='og:description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
-<meta property='og:url' content='https://darongmean.com/'>
+<meta property='og:title' content='HTML Anchor &lt;a&gt; - target attribute • Darong Mean'>
+<meta property='og:description' content='http://stackoverflow.com/a/8867079
+Using target=”_blank” will instruct the browser to create a new browser tab or window when the user clicks on the link.
+Using target=”_new” is technically invalid according to the specifications, but as far as I know every browser will behave the same way: - it will search for a tab or window with the context name “_new” - if a “_new” tab/window is found, then the URL is loaded into it - if it’s not found, a new tab/window is created with the context name “_new”, and the URL loaded into it'>
+<meta property='og:url' content='https://darongmean.com/post/html-anchor-target-attribute/'>
 <meta property='og:site_name' content='Darong Mean'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2017-11-26T00:00:00Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2017-11-26T00:00:00Z'/><meta property='article:modified_time' content='2017-11-26T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.26" />
 
-  <title>Darong Mean</title>
-  <link rel='canonical' href='https://darongmean.com/'>
-  
-    <link href="https://darongmean.com/index.xml" rel="alternate" type="application/rss+xml" title="Darong Mean" />
+  <title>HTML Anchor &lt;a&gt; - target attribute • Darong Mean</title>
+  <link rel='canonical' href='https://darongmean.com/post/html-anchor-target-attribute/'>
   
   
   <link rel='icon' href='/images/favicon.ico'>
@@ -43,7 +45,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='home type-page'>
+<body class='page type-posts'>
   <div class='site'>
 
     <a class='screen-reader' href='#main'>Skip to Content</a>
@@ -53,7 +55,7 @@ ga('send', 'pageview');
         <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
   <ul class='main-menu'>
   <li>
-      <a class='current' aria-current='page' href='/'>Blog</a>
+      <a href='/'>Blog</a>
     </li>
   <li>
       <a href='/about/'>About</a>
@@ -64,7 +66,7 @@ ga('send', 'pageview');
 
         <div class='header-info'>
           
-          <h1 class='site-title title'>Darong Mean</h1>
+          <p class='site-title title'>Darong Mean</p>
           
           <p class='site-description subtitle'>Programmer - (Procrastinating) Blogger - (Casual) Gamer</p>
         </div>
@@ -73,288 +75,113 @@ ga('send', 'pageview');
 
 
 <main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>HTML Anchor &lt;a&gt; - target attribute</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
-
-  <div class='home-sections-container'>
-    <div class='home-sections'><section id='recent-posts' class='home-section'>
-  <header>
-    <h2 class='home-section-title title'>Recent Posts</h2>
-  </header>
-
-  <div class='list-container'>
-    <ul class='list'>
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
 </span>
 
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/401-vs-403/'>401 vs 403</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
 </span>
 
-    </div>
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/deal-with-liferay-friendly-url-mapping/'>Deal with Liferay Friendly URL Mapping</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/git-working-with-deleted-files/'>Git - working with deleted files</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/html-anchor-target-attribute/'>HTML Anchor &lt;a&gt; - target attribute</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/hell-with-java-autobox-or-why-not-use-instanceof/'>Hell with Java Autobox or Why not use instanceof</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/naming-convention/'>Naming Convention</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/sum-type-or-union-type/'>Sum Type/Union Type</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-20T00:00:00Z'>2017, Apr 20</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/how-to-use-boot-clj-and-nrepl-with-docker/'>How to use boot-clj and nREPL with Docker</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-16T00:00:00Z'>2017, Apr 16</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/challenges-java-flame-graphs-introduction/'>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-31T00:00:00Z'>2016, Dec 31</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/books-i-read-2016/'>Books I Read (2016)</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-24T00:00:00Z'>2016, Dec 24</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-24/'>Weekly Roundup 2016/12/24</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-03T00:00:00Z'>2016, Dec 03</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-03/'>Weekly Roundup 2016/12/03</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-27T00:00:00Z'>2016, Nov 27</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-27/'>Weekly Roundup 2016/11/27</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-19T00:00:00Z'>2016, Nov 19</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-19/'>Weekly Roundup 2016/11/19</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-    </ul>
-  </div>
-</section>
 </div>
+
+
   </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  <p><a href="http://stackoverflow.com/a/8867079" target="_blank">http://stackoverflow.com/a/8867079</a></p>
+
+<p>Using <code>target=”_blank”</code> will instruct the browser to create a new browser tab or window when the user clicks on the link.</p>
+
+<p>Using <code>target=”_new”</code> is technically invalid according to the specifications, but as far as I know every browser will behave the same way:
+- it will search for a tab or window with the context name “_new”
+- if a “_new” tab/window is found, then the URL is loaded into it
+- if it’s not found, a new tab/window is created with the context name “_new”, and the URL loaded into it</p>
+
+<p>Note <code>target=”_new”</code> will behave exactly the same as <code>target=”new”</code>, and the latter is valid HTML while the former is invalid HTML.</p>
+
+<p>Adding some confusion to this, in HTML4 the target attribute was deprecated. In HTML5 this decision was reversed, and it is an official part of the spec once again. All browsers support target no matter what version of HTML you are using, but some validators will flag the use as deprecated if your doctype is HTML4.</p>
+
+<hr />
+
+<p><a href="http://www.w3.org/TR/html4/types.html#type-frame-target" target="_blank">http://www.w3.org/TR/html4/types.html#type-frame-target</a></p>
+
+<p>The following target names are reserved and have special meanings.</p>
+
+<ul>
+<li><code>_blank</code> The user agent should load the designated document in a new, unnamed window.</li>
+<li><code>_self</code> The user agent should load the document in the same frame as the element that refers to this target.</li>
+<li><code>_parent</code> The user agent should load the document into the immediate FRAMESET parent of the current frame. This value is equivalent to _self if the current frame has no parent.</li>
+<li><code>_top</code> The user agent should load the document into the full, original window (thus canceling all other frames). This value is equivalent to _self if the current frame has no parent.</li>
+</ul>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/hell-with-java-autobox-or-why-not-use-instanceof/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>Hell with Java Autobox or Why not use instanceof</a>
+    </div><div class='next-entry'>
+      <a href='/post/git-working-with-deleted-files/'>
+        <span class='screen-reader'>Next post: </span>Git - working with deleted files<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
 </main>
 
     <footer id='footer' class='footer-container'>

@@ -4,20 +4,26 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
+<meta name='description' content='In Java Use abstract class.
+See http://stackoverflow.com/questions/9975836/howto-simulate-haskells-either-a-b-in-java
+In Clojure Use vector. [:left …] and [:right ..] to model either type.
+I can pattern match on first element in the vector.
+In Haskell Use algebraic data types.'>
 
-<meta property='og:title' content='Darong Mean'>
-<meta property='og:description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
-<meta property='og:url' content='https://darongmean.com/'>
+<meta property='og:title' content='Sum Type/Union Type • Darong Mean'>
+<meta property='og:description' content='In Java Use abstract class.
+See http://stackoverflow.com/questions/9975836/howto-simulate-haskells-either-a-b-in-java
+In Clojure Use vector. [:left …] and [:right ..] to model either type.
+I can pattern match on first element in the vector.
+In Haskell Use algebraic data types.'>
+<meta property='og:url' content='https://darongmean.com/post/sum-type-or-union-type/'>
 <meta property='og:site_name' content='Darong Mean'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2017-11-26T00:00:00Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2017-11-26T00:00:00Z'/><meta property='article:modified_time' content='2017-11-26T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.26" />
 
-  <title>Darong Mean</title>
-  <link rel='canonical' href='https://darongmean.com/'>
-  
-    <link href="https://darongmean.com/index.xml" rel="alternate" type="application/rss+xml" title="Darong Mean" />
+  <title>Sum Type/Union Type • Darong Mean</title>
+  <link rel='canonical' href='https://darongmean.com/post/sum-type-or-union-type/'>
   
   
   <link rel='icon' href='/images/favicon.ico'>
@@ -43,7 +49,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='home type-page'>
+<body class='page type-posts'>
   <div class='site'>
 
     <a class='screen-reader' href='#main'>Skip to Content</a>
@@ -53,7 +59,7 @@ ga('send', 'pageview');
         <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
   <ul class='main-menu'>
   <li>
-      <a class='current' aria-current='page' href='/'>Blog</a>
+      <a href='/'>Blog</a>
     </li>
   <li>
       <a href='/about/'>About</a>
@@ -64,7 +70,7 @@ ga('send', 'pageview');
 
         <div class='header-info'>
           
-          <h1 class='site-title title'>Darong Mean</h1>
+          <p class='site-title title'>Darong Mean</p>
           
           <p class='site-description subtitle'>Programmer - (Procrastinating) Blogger - (Casual) Gamer</p>
         </div>
@@ -73,288 +79,105 @@ ga('send', 'pageview');
 
 
 <main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>Sum Type/Union Type</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
   
 
-  <div class='home-sections-container'>
-    <div class='home-sections'><section id='recent-posts' class='home-section'>
-  <header>
-    <h2 class='home-section-title title'>Recent Posts</h2>
-  </header>
+<h2 id="in-java">In Java</h2>
 
-  <div class='list-container'>
-    <ul class='list'>
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<p>Use abstract class.</p>
 
-    </div>
+<p>See <a href="http://stackoverflow.com/questions/9975836/howto-simulate-haskells-either-a-b-in-java" target="_blank">http://stackoverflow.com/questions/9975836/howto-simulate-haskells-either-a-b-in-java</a></p>
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/401-vs-403/'>401 vs 403</a>
-      </h3>
-    </header>
-  </article>
-</li>
+<h2 id="in-clojure">In Clojure</h2>
 
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<p>Use vector. <code>[:left …]</code> and <code>[:right ..]</code> to model either type.</p>
 
-    </div>
+<p>I can pattern match on first element in the vector.</p>
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/deal-with-liferay-friendly-url-mapping/'>Deal with Liferay Friendly URL Mapping</a>
-      </h3>
-    </header>
-  </article>
-</li>
+<h2 id="in-haskell">In Haskell</h2>
 
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<p>Use algebraic data types.</p>
 
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/git-working-with-deleted-files/'>Git - working with deleted files</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/html-anchor-target-attribute/'>HTML Anchor &lt;a&gt; - target attribute</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/hell-with-java-autobox-or-why-not-use-instanceof/'>Hell with Java Autobox or Why not use instanceof</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/naming-convention/'>Naming Convention</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/sum-type-or-union-type/'>Sum Type/Union Type</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-20T00:00:00Z'>2017, Apr 20</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/how-to-use-boot-clj-and-nrepl-with-docker/'>How to use boot-clj and nREPL with Docker</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-16T00:00:00Z'>2017, Apr 16</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/challenges-java-flame-graphs-introduction/'>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-31T00:00:00Z'>2016, Dec 31</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/books-i-read-2016/'>Books I Read (2016)</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-24T00:00:00Z'>2016, Dec 24</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-24/'>Weekly Roundup 2016/12/24</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-03T00:00:00Z'>2016, Dec 03</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-03/'>Weekly Roundup 2016/12/03</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-27T00:00:00Z'>2016, Nov 27</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-27/'>Weekly Roundup 2016/11/27</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-19T00:00:00Z'>2016, Nov 19</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-19/'>Weekly Roundup 2016/11/19</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-    </ul>
-  </div>
-</section>
 </div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  
   </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/how-to-use-boot-clj-and-nrepl-with-docker/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>How to use boot-clj and nREPL with Docker</a>
+    </div><div class='next-entry'>
+      <a href='/post/naming-convention/'>
+        <span class='screen-reader'>Next post: </span>Naming Convention<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
 </main>
 
     <footer id='footer' class='footer-container'>

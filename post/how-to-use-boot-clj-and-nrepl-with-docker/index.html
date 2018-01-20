@@ -4,20 +4,22 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
+<meta name='description' content='There&rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
+Here&rsquo;s the final configuration that worked.
+# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &quot;m2 container ready!&quot; image: alpine volumes: - /root/.m2 - .'>
 
-<meta property='og:title' content='Darong Mean'>
-<meta property='og:description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
-<meta property='og:url' content='https://darongmean.com/'>
+<meta property='og:title' content='How to use boot-clj and nREPL with Docker • Darong Mean'>
+<meta property='og:description' content='There&rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
+Here&rsquo;s the final configuration that worked.
+# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &quot;m2 container ready!&quot; image: alpine volumes: - /root/.m2 - .'>
+<meta property='og:url' content='https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/'>
 <meta property='og:site_name' content='Darong Mean'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2017-11-26T00:00:00Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2017-04-20T00:00:00Z'/><meta property='article:modified_time' content='2017-04-20T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.26" />
 
-  <title>Darong Mean</title>
-  <link rel='canonical' href='https://darongmean.com/'>
-  
-    <link href="https://darongmean.com/index.xml" rel="alternate" type="application/rss+xml" title="Darong Mean" />
+  <title>How to use boot-clj and nREPL with Docker • Darong Mean</title>
+  <link rel='canonical' href='https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/'>
   
   
   <link rel='icon' href='/images/favicon.ico'>
@@ -43,7 +45,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='home type-page'>
+<body class='page type-posts'>
   <div class='site'>
 
     <a class='screen-reader' href='#main'>Skip to Content</a>
@@ -53,7 +55,7 @@ ga('send', 'pageview');
         <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
   <ul class='main-menu'>
   <li>
-      <a class='current' aria-current='page' href='/'>Blog</a>
+      <a href='/'>Blog</a>
     </li>
   <li>
       <a href='/about/'>About</a>
@@ -64,7 +66,7 @@ ga('send', 'pageview');
 
         <div class='header-info'>
           
-          <h1 class='site-title title'>Darong Mean</h1>
+          <p class='site-title title'>Darong Mean</p>
           
           <p class='site-description subtitle'>Programmer - (Procrastinating) Blogger - (Casual) Gamer</p>
         </div>
@@ -73,288 +75,171 @@ ga('send', 'pageview');
 
 
 <main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>How to use boot-clj and nREPL with Docker</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-04-20T00:00:00Z'>2017, Apr 20</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
   
 
-  <div class='home-sections-container'>
-    <div class='home-sections'><section id='recent-posts' class='home-section'>
-  <header>
-    <h2 class='home-section-title title'>Recent Posts</h2>
-  </header>
+<p>There&rsquo;s a great post about <a href="http://blog.dominic.io/vagrant-docker-and-clojure/" target="_blank">using clojure with docker.</a> I followed the post with a twist. I used <code>boot-alpine</code> image[<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>] and <code>docker-compose</code> instead of <code>Vagrant</code>.</p>
 
-  <div class='list-container'>
-    <ul class='list'>
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<p>Here&rsquo;s the final configuration that worked.</p>
 
-    </div>
+<pre><code># file docker-compose.yml
+version: '2'
+services:
+  bootclj:
+    command: boot dev
+    image: clojure:boot-alpine
+    ports:
+      - 9007:9007
+      - 9009:9009
+      - 9011:9011
+      - 3000:3000
+    volumes_from:
+      - m2
+    working_dir: /opt/src
+  m2:
+    command: echo &quot;m2 container ready!&quot;
+    image: alpine
+    volumes:
+      - /root/.m2
+      - ./:/opt/src
+</code></pre>
+; file build.boot
+(deftask development []
+  (task-options!
+    cljs {:optimizations    :none
+          :source-map       true
+          :compiler-options {:devcards true}}
+    start-repl {:ip "0.0.0.0" :port 9007}
+    cljs-repl {:nrepl-opts {:bind "0.0.0.0" :port 9009}}
+    reload {:on-jsload 'timer.app/reload
+            :port      9011}
+    serve {:port 3000})
+  identity)
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/401-vs-403/'>401 vs 403</a>
-      </h3>
-    </header>
-  </article>
-</li>
+<h2 id="challenges-i-faced">Challenges I faced</h2>
 
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<p>Being a beginner in both boot-clj and Docker, I bumped into the following issues.</p>
 
-    </div>
+<h3 id="i-couldn-t-connect-to-nrepl-running-in-docker-2">I couldn&rsquo;t connect to nREPL running in Docker[<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>].</h3>
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/deal-with-liferay-friendly-url-mapping/'>Deal with Liferay Friendly URL Mapping</a>
-      </h3>
-    </header>
-  </article>
-</li>
+<p>I got the following error when I used Cursive remote repl to connect.</p>
 
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<pre><code>Connecting to remote nREPL server...
+Error connecting to localhost:9009 - class java.net.ConnectException: Connection refused
+</code></pre>
 
-    </div>
+<p>By going through document and looking at the source code[<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>], I found out that I need to run two tasks to have browser repl working. The task <code>cljs-repl</code> starts a repl server and the task <code>start-repl</code> connects the repl server to browser.</p>
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/git-working-with-deleted-files/'>Git - working with deleted files</a>
-      </h3>
-    </header>
-  </article>
-</li>
+<p>The repl server listens to loopback interface[<sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">4</a></sup>] by default. I used the <code>bind</code> nrepl option to override this setting like the following:</p>
+cljs-repl {:nrepl-opts {:bind "0.0.0.0" :port 9009}}
 
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<h3 id="boot-downloaded-dependencies-everytime-i-rebuilt-docker-images">Boot downloaded dependencies everytime I rebuilt docker images.</h3>
 
-    </div>
+<p>I used data container to store <code>.m2</code> repositories. I just use the following command to rebuild and start the image:</p>
+docker-compose stop bootclj 
+docker-compose rm bootclj
+docker-compose create bootclj
+docker-compose start bootclj
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/html-anchor-target-attribute/'>HTML Anchor &lt;a&gt; - target attribute</a>
-      </h3>
-    </header>
-  </article>
-</li>
+<hr />
 
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
+<p>Footnote:</p>
+<div class="footnotes">
 
-    </div>
+<hr />
 
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/hell-with-java-autobox-or-why-not-use-instanceof/'>Hell with Java Autobox or Why not use instanceof</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/naming-convention/'>Naming Convention</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/sum-type-or-union-type/'>Sum Type/Union Type</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-20T00:00:00Z'>2017, Apr 20</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/how-to-use-boot-clj-and-nrepl-with-docker/'>How to use boot-clj and nREPL with Docker</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-16T00:00:00Z'>2017, Apr 16</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/challenges-java-flame-graphs-introduction/'>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-31T00:00:00Z'>2016, Dec 31</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/books-i-read-2016/'>Books I Read (2016)</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-24T00:00:00Z'>2016, Dec 24</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-24/'>Weekly Roundup 2016/12/24</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-03T00:00:00Z'>2016, Dec 03</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-03/'>Weekly Roundup 2016/12/03</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-27T00:00:00Z'>2016, Nov 27</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-27/'>Weekly Roundup 2016/11/27</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-19T00:00:00Z'>2016, Nov 19</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-19/'>Weekly Roundup 2016/11/19</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-    </ul>
-  </div>
-</section>
+<ol>
+<li id="fn:1">1: <a href="https://hub.docker.com/_/clojure/" target="_blank">link to official Docker image for Clojure</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">2: <code>adzerk/boot-cljs-repl</code> version <code>0.3.3</code> is used in this post
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3">3: <a href="https://github.com/adzerk-oss/boot-cljs-repl/blob/master/src/adzerk/boot_cljs_repl.clj#L204" target="_blank">boot_cljs_repl.clj</a> and <a href="https://github.com/boot-clj/boot/blob/2.6.0/boot/core/src/boot/task/built_in.clj#L371" target="_blank">built_in.clj</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+<li id="fn:4">4: <a href="https://clojure.org/reference/repl_and_main#_launching_a_socket_server" target="_blank">https://clojure.org/reference/repl_and_main#_launching_a_socket_server</a>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+</ol>
 </div>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  
   </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/challenges-java-flame-graphs-introduction/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</a>
+    </div><div class='next-entry'>
+      <a href='/post/sum-type-or-union-type/'>
+        <span class='screen-reader'>Next post: </span>Sum Type/Union Type<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
 </main>
 
     <footer id='footer' class='footer-container'>

@@ -3,37 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://darongmean.com/401-vs-403/</loc>
+    <loc>https://darongmean.com/post/401-vs-403/</loc>
     <lastmod>2017-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/deal-with-liferay-friendly-url-mapping/</loc>
+    <loc>https://darongmean.com/post/deal-with-liferay-friendly-url-mapping/</loc>
     <lastmod>2017-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/git-working-with-deleted-files/</loc>
+    <loc>https://darongmean.com/post/git-working-with-deleted-files/</loc>
     <lastmod>2017-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/html-anchor-target-attribute/</loc>
+    <loc>https://darongmean.com/post/html-anchor-target-attribute/</loc>
     <lastmod>2017-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/hell-with-java-autobox-or-why-not-use-instanceof/</loc>
+    <loc>https://darongmean.com/post/hell-with-java-autobox-or-why-not-use-instanceof/</loc>
     <lastmod>2017-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/naming-convention/</loc>
+    <loc>https://darongmean.com/post/naming-convention/</loc>
     <lastmod>2017-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/sum-type-or-union-type/</loc>
+    <loc>https://darongmean.com/post/sum-type-or-union-type/</loc>
     <lastmod>2017-11-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,38 +48,43 @@
   </url>
   
   <url>
-    <loc>https://darongmean.com/how-to-use-boot-clj-and-nrepl-with-docker/</loc>
+    <loc>https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/</loc>
     <lastmod>2017-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/challenges-java-flame-graphs-introduction/</loc>
+    <loc>https://darongmean.com/post/challenges-java-flame-graphs-introduction/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/books-i-read-2016/</loc>
+    <loc>https://darongmean.com/post/books-i-read-2016/</loc>
     <lastmod>2016-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/weekly-roundup-2016-12-24/</loc>
+    <loc>https://darongmean.com/post/weekly-roundup-2016-12-24/</loc>
     <lastmod>2016-12-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/weekly-roundup-2016-12-03/</loc>
+    <loc>https://darongmean.com/post/weekly-roundup-2016-12-03/</loc>
     <lastmod>2016-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/weekly-roundup-2016-11-27/</loc>
+    <loc>https://darongmean.com/post/weekly-roundup-2016-11-27/</loc>
     <lastmod>2016-11-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://darongmean.com/weekly-roundup-2016-11-19/</loc>
+    <loc>https://darongmean.com/post/weekly-roundup-2016-11-19/</loc>
     <lastmod>2016-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darongmean.com/authors/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
