@@ -5,10 +5,21 @@
     <link>https://darongmean.com/</link>
     <description>Recent content on Darong Mean</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darongmean.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React-Native &amp; Clojurescript - Create a project with shadow-cljs</title>
+      <link>https://darongmean.com/post/react-native-cljs-shadow-cljs/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/post/react-native-cljs-shadow-cljs/</guid>
+      <description>Disclaimer: This serie is my notes while I&amp;rsquo;m exploring ReactNative and Clojurescript ecosystems. I&amp;rsquo;ve never done any mobile development or anything related to XCode. I&amp;rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
+ TLDR; Create the project I installed npm, yarn, react-native-cli, XCode, shadow-cljs, and used the following commands to create the project.
+react-native init FunanMobile cd FunanMobile yarn add --dev shadow-cljs mkdir -p cljs/hello vim cljs/hello/core.</description>
+    </item>
     
     <item>
       <title>401 vs 403</title>

@@ -4,26 +4,22 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='401 “Unauthorized” really means unauthenticated. You need valid credentials for me to respond to this request.
-403 “Forbidden” really means unauthorized. I understand your credentials, but sorry, you’re not allowed.
-Source https://www.youtube.com/watch?feature=player_detailpage&amp;v=FeSdFhsKGG0#t=394
- It seems the video is no longer available in Youtube :(
- '>
+<meta name='description' content='Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
+ TLDR; Create the project I installed npm, yarn, react-native-cli, XCode, shadow-cljs, and used the following commands to create the project.
+react-native init FunanMobile cd FunanMobile yarn add --dev shadow-cljs mkdir -p cljs/hello vim cljs/hello/core.'>
 
-<meta property='og:title' content='401 vs 403 • Darong Mean'>
-<meta property='og:description' content='401 “Unauthorized” really means unauthenticated. You need valid credentials for me to respond to this request.
-403 “Forbidden” really means unauthorized. I understand your credentials, but sorry, you’re not allowed.
-Source https://www.youtube.com/watch?feature=player_detailpage&amp;v=FeSdFhsKGG0#t=394
- It seems the video is no longer available in Youtube :(
- '>
-<meta property='og:url' content='https://darongmean.com/post/401-vs-403/'>
+<meta property='og:title' content='React-Native &amp; Clojurescript - Create a project with shadow-cljs • Darong Mean'>
+<meta property='og:description' content='Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
+ TLDR; Create the project I installed npm, yarn, react-native-cli, XCode, shadow-cljs, and used the following commands to create the project.
+react-native init FunanMobile cd FunanMobile yarn add --dev shadow-cljs mkdir -p cljs/hello vim cljs/hello/core.'>
+<meta property='og:url' content='https://darongmean.com/post/react-native-cljs-shadow-cljs/'>
 <meta property='og:site_name' content='Darong Mean'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2017-11-26T00:00:00Z'/><meta property='article:modified_time' content='2017-11-26T00:00:00Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2018-04-28T00:00:00Z'/><meta property='article:modified_time' content='2018-04-28T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.26" />
 
-  <title>401 vs 403 • Darong Mean</title>
-  <link rel='canonical' href='https://darongmean.com/post/401-vs-403/'>
+  <title>React-Native &amp; Clojurescript - Create a project with shadow-cljs • Darong Mean</title>
+  <link rel='canonical' href='https://darongmean.com/post/react-native-cljs-shadow-cljs/'>
   
   
   <link rel='icon' href='/images/favicon.ico'>
@@ -83,7 +79,7 @@ ga('send', 'pageview');
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>401 vs 403</h1>
+      <h1 class='title'>React-Native &amp; Clojurescript - Create a project with shadow-cljs</h1>
       
 
     </div>
@@ -98,7 +94,7 @@ ga('send', 'pageview');
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
+  <time class='date' datetime='2018-04-28T00:00:00Z'>2018, Apr 28</time>
 </span>
 
   
@@ -109,7 +105,7 @@ ga('send', 'pageview');
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-One min read
+2 mins read
 </span>
 
 
@@ -123,15 +119,88 @@ One min read
     
 
     <div class='entry-content'>
-  <p><code>401 “Unauthorized”</code> really means unauthenticated. You need valid credentials for me to respond to this request.</p>
-
-<p><code>403 “Forbidden”</code> really means unauthorized. I understand your credentials, but sorry, you’re not allowed.</p>
-
-<p>Source <a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=FeSdFhsKGG0#t=394" target="_blank">https://www.youtube.com/watch?feature=player_detailpage&amp;v=FeSdFhsKGG0#t=394</a></p>
+  
 
 <blockquote>
-<p>It seems the video is no longer available in Youtube :(</p>
+<p>Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using <a href="http://shadow-cljs.org/" target="_blank">shadow-cljs</a>.</p>
 </blockquote>
+
+<h1 id="tldr">TLDR;</h1>
+
+<h3 id="create-the-project">Create the project</h3>
+
+<p>I installed <code>npm</code>, <code>yarn</code>, <code>react-native-cli</code>, <code>XCode</code>, <code>shadow-cljs</code>, and used the following commands to create the project.</p>
+react-native init FunanMobile
+cd FunanMobile
+yarn add --dev shadow-cljs
+mkdir -p cljs/hello
+vim cljs/hello/core.cljs
+cat cljs/hello/core.cljs
+(ns hello.core)
+
+(defn foo []
+  (js/alert "Hello from CLJS!"))
+mkdir js
+vim js/.babelrc
+cat js/.babelrc
+{
+    "ignore": ["*.js"]
+}
+shadow-cljs init
+vim shadow-cljs.edn
+cat shadow-cljs.edn
+{:source-paths
+ ["cljs"]
+
+ :dependencies
+ []
+
+ :builds
+ {:app {:target     :npm-module
+        :runtime    :react-native
+        :entries    [hello.core]
+        :output-dir "js"}}}
+vim index.js
+cat index.js
+import { AppRegistry } from 'react-native';
+import App from './App';
+import './js/shadow.cljs.devtools.client.react_native';
+import { foo } from './js/hello.core';
+
+AppRegistry.registerComponent('FunanMobile', () => App);
+foo();
+
+<h3 id="start-development">Start development</h3>
+yarn shadow-cljs watch app
+react-native run-ios
+
+<h1 id="why-shadow-cljs">Why shadow-cljs?</h1>
+
+<p>I tried <a href="https://github.com/drapanjanas/re-natal" target="_blank">re-natal</a> and it worked. However, the workflow around importing external components was frustrating.</p>
+
+<p>If I forgot to <code>require</code> the component, I had to re-run the tools to use the component in CLJS. I played around many different external components. Re-run the tools took most of my time while I should spend those time to do the work instead.</p>
+
+<p>Using shadow-cljs improved my workflow a lot:</p>
+
+<ul>
+<li>import external components? Follow documents of the component, re-run shadow-cljs, done.</li>
+<li>improved support of importing ES6 modules via <code>require</code></li>
+<li>start up faster than <code>lein</code></li>
+</ul>
+
+<p>The support for React Native of shadow-cljs is experimental. <code>Source map</code> isn&rsquo;t working and some other stuffs might also not work. However, I need only <code>hot reload</code> and <code>repl</code> in my project.</p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank">https://facebook.github.io/react-native/docs/getting-started.html</a></li>
+<li><a href="http://cljsrn.org/" target="_blank">http://cljsrn.org/</a></li>
+<li><a href="https://github.com/drapanjanas/re-natal" target="_blank">https://github.com/drapanjanas/re-natal</a></li>
+<li><a href="https://github.com/gphilipp/react-native-with-clojurescript" target="_blank">https://github.com/gphilipp/react-native-with-clojurescript</a></li>
+<li><a href="https://github.com/thheller/shadow-cljs/issues/214#issuecomment-381237115" target="_blank">https://github.com/thheller/shadow-cljs/issues/214#issuecomment-381237115</a></li>
+<li><a href="https://github.com/idokutela/rum-native" target="_blank">https://github.com/idokutela/rum-native</a></li>
+<li><a href="https://github.com/DogLooksGood/shadow-cljs-with-react-native-note" target="_blank">https://github.com/DogLooksGood/shadow-cljs-with-react-native-note</a></li>
+</ul>
 
 </div>
 
@@ -147,7 +216,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/deal-with-liferay-friendly-url-mapping/'>
+      <a href='/post/401-vs-403/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -155,17 +224,7 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>Deal with Liferay Friendly URL Mapping</a>
-    </div><div class='next-entry'>
-      <a href='/post/react-native-cljs-shadow-cljs/'>
-        <span class='screen-reader'>Next post: </span>React-Native &amp; Clojurescript - Create a project with shadow-cljs<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>401 vs 403</a>
     </div></div>
 </nav>
 
