@@ -130,25 +130,31 @@ ga('send', 'pageview');
 <h3 id="create-the-project">Create the project</h3>
 
 <p>I installed <code>npm</code>, <code>yarn</code>, <code>react-native-cli</code>, <code>XCode</code>, <code>shadow-cljs</code>, and used the following commands to create the project.</p>
-react-native init FunanMobile
+
+<pre><code>react-native init FunanMobile
 cd FunanMobile
 yarn add --dev shadow-cljs
 mkdir -p cljs/hello
 vim cljs/hello/core.cljs
 cat cljs/hello/core.cljs
+</code></pre>
 (ns hello.core)
 
 (defn foo []
   (js/alert "Hello from CLJS!"))
-mkdir js
+
+<pre><code>mkdir js
 vim js/.babelrc
 cat js/.babelrc
+</code></pre>
 {
     "ignore": ["*.js"]
 }
-shadow-cljs init
+
+<pre><code>shadow-cljs init
 vim shadow-cljs.edn
 cat shadow-cljs.edn
+</code></pre>
 {:source-paths
  ["cljs"]
 
@@ -160,8 +166,10 @@ cat shadow-cljs.edn
         :runtime    :react-native
         :entries    [hello.core]
         :output-dir "js"}}}
-vim index.js
+
+<pre><code>vim index.js
 cat index.js
+</code></pre>
 import { AppRegistry } from 'react-native';
 import App from './App';
 import './js/shadow.cljs.devtools.client.react_native';
