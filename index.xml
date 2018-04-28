@@ -125,7 +125,7 @@ Here&amp;rsquo;s the final configuration that worked.
       <guid>https://darongmean.com/post/challenges-java-flame-graphs-introduction/</guid>
       <description>I&amp;rsquo;ve got interested into flame graph and gone through an excellent post Java Flame Graphs Introduction: Fire For Everyone!
 I tried the following script:
-for i in {1..100}; do jstack   iloveoldshit.jstk; sleep 0.1; done cat iloveoldshit.jstk | ./stackcollapse-jstack.pl | ./flamegraph.pl --color=green  jstack-flames.svg and get the following error:
+for i in {1..100}; do jstack &amp;lt;pid&amp;gt; &amp;gt;&amp;gt; iloveoldshit.jstk; sleep 0.1; done cat iloveoldshit.jstk | ./stackcollapse-jstack.pl | ./flamegraph.pl --color=green &amp;gt; jstack-flames.svg and get the following error:
 ERROR: No stack counts found Being a beginner, I don&amp;rsquo;t know what happened. So I decided to go through source code.</description>
     </item>
     

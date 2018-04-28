@@ -16,7 +16,7 @@ Here&rsquo;s the final configuration that worked.
 <meta property='og:site_name' content='Darong Mean'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2017-04-20T00:00:00Z'/><meta property='article:modified_time' content='2017-04-20T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.26" />
+<meta name="generator" content="Hugo 0.40.1" />
 
   <title>How to use boot-clj and nREPL with Docker • Darong Mean</title>
   <link rel='canonical' href='https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/'>
@@ -121,7 +121,7 @@ ga('send', 'pageview');
     <div class='entry-content'>
   
 
-<p>There&rsquo;s a great post about <a href="http://blog.dominic.io/vagrant-docker-and-clojure/" target="_blank">using clojure with docker.</a> I followed the post with a twist. I used <code>boot-alpine</code> image[<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>] and <code>docker-compose</code> instead of <code>Vagrant</code>.</p>
+<p>There&rsquo;s a great post about <a href="http://blog.dominic.io/vagrant-docker-and-clojure/" target="_blank">using clojure with docker.</a> I followed the post with a twist. I used <code>boot-alpine</code> image[<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>] and <code>docker-compose</code> instead of <code>Vagrant</code>.</p>
 
 <p>Here&rsquo;s the final configuration that worked.</p>
 
@@ -146,24 +146,23 @@ services:
       - /root/.m2
       - ./:/opt/src
 </code></pre>
-; file build.boot
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#75715e">; file build.boot</span>
 (deftask development []
   (task-options!
-    cljs {:optimizations    :none
-          :source-map       true
-          :compiler-options {:devcards true}}
-    start-repl {:ip "0.0.0.0" :port 9007}
-    cljs-repl {:nrepl-opts {:bind "0.0.0.0" :port 9009}}
-    reload {:on-jsload 'timer.app/reload
-            :port      9011}
-    serve {:port 3000})
-  identity)
-
+    cljs {<span style="color:#e6db74">:optimizations</span>    <span style="color:#e6db74">:none</span>
+          <span style="color:#e6db74">:source-map</span>       true
+          <span style="color:#e6db74">:compiler-options</span> {<span style="color:#e6db74">:devcards</span> true}}
+    start-repl {<span style="color:#e6db74">:ip</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9007</span>}
+    cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}
+    reload {<span style="color:#e6db74">:on-jsload</span> <span style="color:#e6db74">&#39;timer.app/reload</span>
+            <span style="color:#e6db74">:port</span>      <span style="color:#ae81ff">9011</span>}
+    serve {<span style="color:#e6db74">:port</span> <span style="color:#ae81ff">3000</span>})
+  identity)</code></pre></div>
 <h2 id="challenges-i-faced">Challenges I faced</h2>
 
 <p>Being a beginner in both boot-clj and Docker, I bumped into the following issues.</p>
 
-<h3 id="i-couldn-t-connect-to-nrepl-running-in-docker-2">I couldn&rsquo;t connect to nREPL running in Docker[<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>].</h3>
+<h3 id="i-couldn-t-connect-to-nrepl-running-in-docker-2">I couldn&rsquo;t connect to nREPL running in Docker[<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>].</h3>
 
 <p>I got the following error when I used Cursive remote repl to connect.</p>
 
@@ -171,19 +170,17 @@ services:
 Error connecting to localhost:9009 - class java.net.ConnectException: Connection refused
 </code></pre>
 
-<p>By going through document and looking at the source code[<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>], I found out that I need to run two tasks to have browser repl working. The task <code>cljs-repl</code> starts a repl server and the task <code>start-repl</code> connects the repl server to browser.</p>
+<p>By going through document and looking at the source code[<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup>], I found out that I need to run two tasks to have browser repl working. The task <code>cljs-repl</code> starts a repl server and the task <code>start-repl</code> connects the repl server to browser.</p>
 
-<p>The repl server listens to loopback interface[<sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">4</a></sup>] by default. I used the <code>bind</code> nrepl option to override this setting like the following:</p>
-cljs-repl {:nrepl-opts {:bind "0.0.0.0" :port 9009}}
-
+<p>The repl server listens to loopback interface[<sup class="footnote-ref" id="fnref:4"><a href="#fn:4">4</a></sup>] by default. I used the <code>bind</code> nrepl option to override this setting like the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}</code></pre></div>
 <h3 id="boot-downloaded-dependencies-everytime-i-rebuilt-docker-images">Boot downloaded dependencies everytime I rebuilt docker images.</h3>
 
 <p>I used data container to store <code>.m2</code> repositories. I just use the following command to rebuild and start the image:</p>
-docker-compose stop bootclj 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker-compose stop bootclj 
 docker-compose rm bootclj
 docker-compose create bootclj
-docker-compose start bootclj
-
+docker-compose start bootclj</code></pre></div>
 <hr />
 
 <p>Footnote:</p>

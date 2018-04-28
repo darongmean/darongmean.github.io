@@ -16,7 +16,7 @@ react-native init FunanMobile cd FunanMobile yarn add --dev shadow-cljs mkdir -p
 <meta property='og:site_name' content='Darong Mean'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2018-04-28T00:00:00Z'/><meta property='article:modified_time' content='2018-04-28T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.26" />
+<meta name="generator" content="Hugo 0.40.1" />
 
   <title>React-Native &amp; Clojurescript - Create a project with shadow-cljs • Darong Mean</title>
   <link rel='canonical' href='https://darongmean.com/post/react-native-cljs-shadow-cljs/'>
@@ -138,46 +138,43 @@ mkdir -p cljs/hello
 vim cljs/hello/core.cljs
 cat cljs/hello/core.cljs
 </code></pre>
-(ns hello.core)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">(<span style="color:#66d9ef">ns </span>hello.core)
 
-(defn foo []
-  (js/alert "Hello from CLJS!"))
-
+(<span style="color:#66d9ef">defn </span>foo []
+  (js/alert <span style="color:#e6db74">&#34;Hello from CLJS!&#34;</span>))</code></pre></div>
 <pre><code>mkdir js
 vim js/.babelrc
 cat js/.babelrc
 </code></pre>
-{
-    "ignore": ["*.js"]
-}
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;ignore&#34;</span>: [<span style="color:#e6db74">&#34;*.js&#34;</span>]
+}</code></pre></div>
 <pre><code>shadow-cljs init
 vim shadow-cljs.edn
 cat shadow-cljs.edn
 </code></pre>
-{:source-paths
- ["cljs"]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">{<span style="color:#e6db74">:source-paths</span>
+ [<span style="color:#e6db74">&#34;cljs&#34;</span>]
 
- :dependencies
+ <span style="color:#e6db74">:dependencies</span>
  []
 
- :builds
- {:app {:target     :npm-module
-        :runtime    :react-native
-        :entries    [hello.core]
-        :output-dir "js"}}}
-
+ <span style="color:#e6db74">:builds</span>
+ {<span style="color:#e6db74">:app</span> {<span style="color:#e6db74">:target</span>     <span style="color:#e6db74">:npm-module</span>
+        <span style="color:#e6db74">:runtime</span>    <span style="color:#e6db74">:react-native</span>
+        <span style="color:#e6db74">:entries</span>    [hello.core]
+        <span style="color:#e6db74">:output-dir</span> <span style="color:#e6db74">&#34;js&#34;</span>}}}</code></pre></div>
 <pre><code>vim index.js
 cat index.js
 </code></pre>
-import { AppRegistry } from 'react-native';
-import App from './App';
-import './js/shadow.cljs.devtools.client.react_native';
-import { foo } from './js/hello.core';
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AppRegistry</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-native&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">App</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./App&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;./js/shadow.cljs.devtools.client.react_native&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">foo</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./js/hello.core&#39;</span>;
 
-AppRegistry.registerComponent('FunanMobile', () => App);
-foo();
-
+<span style="color:#a6e22e">AppRegistry</span>.<span style="color:#a6e22e">registerComponent</span>(<span style="color:#e6db74">&#39;FunanMobile&#39;</span>, () =&gt; <span style="color:#a6e22e">App</span>);
+<span style="color:#a6e22e">foo</span>();
+</code></pre></div>
 <h3 id="start-development">Start development</h3>
 
 <pre><code>yarn shadow-cljs watch app
