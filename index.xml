@@ -5,10 +5,32 @@
     <link>https://darongmean.com/</link>
     <description>Recent content on Darong Mean</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 28 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darongmean.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React-Native &amp; Clojurescript - ES6 Import/Export</title>
+      <link>https://darongmean.com/post/react-native-cljs-es6-import-export/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/post/react-native-cljs-es6-import-export/</guid>
+      <description>Disclaimer: This serie is my notes while I&amp;rsquo;m exploring ReactNative and Clojurescript ecosystems. I&amp;rsquo;ve never done any mobile development or anything related to XCode. I&amp;rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
+ Table: ES6 Import to CLJS Require1
+   ES6 Import CLJS Require     import defaultExport from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :default defaultExport])   import * as name from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :as name])   import { export } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export)])   import { export as alias } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :rename {export alias}])   import { export1 , export2 } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export1 export2)])   import { export1 , export2 as alias2 , […​] } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export1) :rename {export2 alias2}])   import defaultExport, { export [ , […​] ] } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export) :default defaultExport])   import defaultExport, * as name from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :as name :default defaultExport])   import &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo;])    The :default option is currently only available in shadow-cljs, you can vote here to hopefully make it standard.</description>
+    </item>
+    
+    <item>
+      <title>React-Native &amp; Clojurescript - Work with XCode</title>
+      <link>https://darongmean.com/post/react-native-cljs-xcode/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/post/react-native-cljs-xcode/</guid>
+      <description>Disclaimer: This serie is my notes while I&amp;rsquo;m exploring ReactNative and Clojurescript ecosystems. I&amp;rsquo;ve never done any mobile development or anything related to XCode. I&amp;rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
+ There&amp;rsquo;s no suprise that I would encounter issues with XCode. Here are the issues I managed to solve so far.
+Error running React Native app from terminal (iOS) Entered the command react-native ios, and I would get the following error</description>
+    </item>
     
     <item>
       <title>React-Native &amp; Clojurescript - Create a project with shadow-cljs</title>

@@ -4,20 +4,22 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
+<meta name='description' content='Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
+ There&rsquo;s no suprise that I would encounter issues with XCode. Here are the issues I managed to solve so far.
+Error running React Native app from terminal (iOS) Entered the command react-native ios, and I would get the following error'>
 
-<meta property='og:title' content='Tags • Darong Mean'>
-<meta property='og:description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
-<meta property='og:url' content='https://darongmean.com/tags/'>
+<meta property='og:title' content='React-Native &amp; Clojurescript - Work with XCode • Darong Mean'>
+<meta property='og:description' content='Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
+ There&rsquo;s no suprise that I would encounter issues with XCode. Here are the issues I managed to solve so far.
+Error running React Native app from terminal (iOS) Entered the command react-native ios, and I would get the following error'>
+<meta property='og:url' content='https://darongmean.com/post/react-native-cljs-xcode/'>
 <meta property='og:site_name' content='Darong Mean'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2018-04-30T00:00:00Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2018-04-29T00:00:00Z'/><meta property='article:modified_time' content='2018-04-29T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.1" />
 
-  <title>Tags • Darong Mean</title>
-  <link rel='canonical' href='https://darongmean.com/tags/'>
-  
-    <link href="https://darongmean.com/tags/index.xml" rel="alternate" type="application/rss+xml" title="Darong Mean" />
+  <title>React-Native &amp; Clojurescript - Work with XCode • Darong Mean</title>
+  <link rel='canonical' href='https://darongmean.com/post/react-native-cljs-xcode/'>
   
   
   <link rel='icon' href='/images/favicon.ico'>
@@ -43,7 +45,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='taxonomyTerm type-tags taxonomyTerm-tag'>
+<body class='page type-posts'>
   <div class='site'>
 
     <a class='screen-reader' href='#main'>Skip to Content</a>
@@ -73,22 +75,140 @@ ga('send', 'pageview');
 
 
 <main id='main' class='main'>
-  <header class='header-container'>
-    <div class='header'>
-      <div class='header-info'>
-        <h1 class='title'>Tags</h1>
-        
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>React-Native &amp; Clojurescript - Work with XCode</h1>
+      
 
-      </div>
     </div>
-  </header>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-04-29T00:00:00Z'>2018, Apr 29</time>
+</span>
 
   
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
 
-  <div class='term-cloud-container'>
-    <ul class='term-cloud'><span>Not a single Tag!</span></ul>
+
+</div>
+
 
   </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<blockquote>
+<p>Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using <a href="http://shadow-cljs.org/" target="_blank">shadow-cljs</a>.</p>
+</blockquote>
+
+<p>There&rsquo;s no suprise that I would encounter issues with XCode. Here are the issues I managed to solve so far.</p>
+
+<h1 id="error-running-react-native-app-from-terminal-ios">Error running React Native app from terminal (iOS)</h1>
+
+<p>Entered the command <code>react-native ios</code>, and I would get the following error</p>
+
+<blockquote>
+<p>xcrun: error: unable to find utility &ldquo;instruments&rdquo;, not a developer tool or in PATH</p>
+
+<p>Command failed: xcrun instruments -s
+xcrun: error: unable to find utility &ldquo;instruments&rdquo;, not a developer tool or in PATH</p>
+</blockquote>
+
+<p>The solution could be found at <a href="https://stackoverflow.com/a/41022224" target="_blank">https://stackoverflow.com/a/41022224</a>.</p>
+
+<h1 id="iphone-keeps-rapidly-connecting-and-disconnecting-when-i-plug-it-into-my-macbook">Iphone keeps rapidly connecting and disconnecting when I plug it into my Macbook</h1>
+
+<p>Iphone kept beeping similar to this <a href="https://www.youtube.com/watch?v=q2v1Gh9EVMg" target="_blank">https://www.youtube.com/watch?v=q2v1Gh9EVMg</a>.</p>
+
+<p>For some reason, my phone needed to be 100% charge to connect to the Macbook successfully.</p>
+
+<h1 id="build-failed-when-run-on-real-device">Build failed when run on real device</h1>
+
+<p>I tried running the demo app on real device via XCode and I got the following error.</p>
+
+<blockquote>
+<p>Code Signing Error: Signing for &ldquo;FunanMobile&rdquo; requires a development team. Select a development team in the project editor.</p>
+
+<p>Code Signing Error: Code signing is required for product type &lsquo;Application&rsquo; in SDK &lsquo;iOS 11.2’</p>
+
+<p>Code Signing Error: Signing for &ldquo;FunanMobileTests&rdquo; requires a development team. Select a development team in the project editor.</p>
+
+<p>Code Signing Error: Code signing is required for product type &lsquo;Unit Test Bundle&rsquo; in SDK &lsquo;iOS 11.2&rsquo;</p>
+</blockquote>
+
+<p>Followed the instruction on <a href="https://stackoverflow.com/a/39524311" target="_blank">https://stackoverflow.com/a/39524311</a>, I had to register a developer account and chose the account in XCode for both normal and test build.</p>
+
+<h1 id="build-failed-after-update-xcode">Build failed after update XCode</h1>
+
+<p>Apple released a new version of XCode. I upgraded it and the build failed by complaining about <code>SDWebImage</code> module. <code>SWWebImage</code> should be the component imported by <code>react-native-fast-image</code>. I found some discussion at <a href="https://github.com/DylanVann/react-native-fast-image/issues/66" target="_blank">https://github.com/DylanVann/react-native-fast-image/issues/66</a>.</p>
+
+<p>&ldquo;Project &gt; Clean&rdquo; was the menu I needed. Just like other software, I just clean the (XCode)project when in doubt.</p>
+
+<h1 id="deploy-and-run-react-native-app-on-real-device-via-wifi">Deploy and run React Native app on real device via WIFI</h1>
+
+<p>Latest version of XCode and MacOS support &ldquo;network debugging&rdquo;. I followed the instruction in <a href="https://stackoverflow.com/questions/44382841/how-do-you-perform-wireless-debugging-in-xcode-9-with-ios-11-apple-tv-4k-etc" target="_blank">https://stackoverflow.com/questions/44382841/how-do-you-perform-wireless-debugging-in-xcode-9-with-ios-11-apple-tv-4k-etc</a> and was able to deploy and run the app. I didn&rsquo;t have to connect the phone via USB.</p>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/react-native-cljs-shadow-cljs/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>React-Native &amp; Clojurescript - Create a project with shadow-cljs</a>
+    </div><div class='next-entry'>
+      <a href='/post/react-native-cljs-es6-import-export/'>
+        <span class='screen-reader'>Next post: </span>React-Native &amp; Clojurescript - ES6 Import/Export<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
 </main>
 
     <footer id='footer' class='footer-container'>
