@@ -1,132 +1,135 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='There&rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://darongmean.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://darongmean.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://darongmean.com/favicon-16x16.png">
+<link rel="manifest" href="https://darongmean.com/site.webmanifest">
+<link rel="mask-icon" href="https://darongmean.com/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="boot-clj,,
+docker,,
+nrepl,,
+cljs-repl,
+">
+
+<meta property="og:title" content="How to use boot-clj and nREPL with Docker" />
+<meta property="og:description" content="There&rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
 Here&rsquo;s the final configuration that worked.
-# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &quot;m2 container ready!&quot; image: alpine volumes: - /root/.m2 - .'>
+# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &#34;m2 container ready!&#34; image: alpine volumes: - /root/.m2 - ./:/opt/src ; file build." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/" /><meta property="og:image" content="https://darongmean.com/images/avatar@2x.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-04-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-04-20T00:00:00+00:00" />
 
-<meta property='og:title' content='How to use boot-clj and nREPL with Docker • Darong Mean'>
-<meta property='og:description' content='There&rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
+
+<meta property="og:site_name" content="Darong Mean" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="https://darongmean.com/images/avatar@2x.png"/>
+
+<meta name="twitter:title" content="How to use boot-clj and nREPL with Docker"/>
+<meta name="twitter:description" content="There&rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
 Here&rsquo;s the final configuration that worked.
-# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &quot;m2 container ready!&quot; image: alpine volumes: - /root/.m2 - .'>
-<meta property='og:url' content='https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/'>
-<meta property='og:site_name' content='Darong Mean'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2017-04-20T00:00:00Z'/><meta property='article:modified_time' content='2017-04-20T00:00:00Z'/><meta name='twitter:card' content='summary'>
-
-<meta name="generator" content="Hugo 0.40.1" />
-
-  <title>How to use boot-clj and nREPL with Docker • Darong Mean</title>
-  <link rel='canonical' href='https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/'>
-  
-  
-  <link rel='icon' href='/images/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.f0e8df71.css'><link rel='stylesheet' href='/css/custom.css'>
-<script>
-    var _rollbarConfig = {
-        accessToken: "43aac4bbe89e471eb0c4e16dddc06414",
-        captureUncaught: true,
-        payload: {
-            environment: "production"
-        }
-    };
-    !function(r){function o(n){if(e[n])return e[n].exports;var t=e[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,o),t.loaded=!0,t.exports}var e={};return o.m=r,o.c=e,o.p="",o(0)}([function(r,o,e){"use strict";var n=e(1),t=e(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.2.7/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,o,e){"use strict";function n(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function t(r,o){this.options=r,this._rollbarOldOnError=null;var e=s++;this.shimId=function(){return e},window&&window._rollbarShims&&(window._rollbarShims[e]={handler:o,messages:[]})}function a(r,o){var e=o.globalAlias||"Rollbar";if("object"==typeof r[e])return r[e];r._rollbarShims={},r._rollbarWrappedError=null;var t=new p(o);return n(function(){o.captureUncaught&&(t._rollbarOldOnError=r.onerror,i.captureUncaughtExceptions(r,t,!0),i.wrapGlobals(r,t,!0)),o.captureUnhandledRejections&&i.captureUnhandledRejections(r,t,!0);var n=o.autoInstrument;return(void 0===n||n===!0||"object"==typeof n&&n.network)&&r.addEventListener&&(r.addEventListener("load",t.captureLoad.bind(t)),r.addEventListener("DOMContentLoaded",t.captureDomContentLoaded.bind(t))),r[e]=t,t})()}function l(r){return n(function(){var o=this,e=Array.prototype.slice.call(arguments,0),n={shim:o,method:r,args:e,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)})}var i=e(2),s=0,d=e(3),c=function(r,o){return new t(r,o)},p=d.bind(null,c);t.prototype.loadFull=function(r,o,e,t,a){var l=function(){var o;if(void 0===r._rollbarDidLoad){o=new Error("rollbar.js did not load");for(var e,n,t,l,i=0;e=r._rollbarShims[i++];)for(e=e.messages||[];n=e.shift();)for(t=n.args||[],i=0;i<t.length;++i)if(l=t[i],"function"==typeof l){l(o);break}}"function"==typeof a&&a(o)},i=!1,s=o.createElement("script"),d=o.getElementsByTagName("script")[0],c=d.parentNode;s.crossOrigin="",s.src=t.rollbarJsUrl,e||(s.async=!0),s.onload=s.onreadystatechange=n(function(){if(!(i||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){s.onload=s.onreadystatechange=null;try{c.removeChild(s)}catch(r){}i=!0,l()}}),c.insertBefore(s,d)},t.prototype.wrap=function(r,o,e){try{var n;if(n="function"==typeof o?o:function(){return o||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){e&&"function"==typeof e&&e.apply(this,arguments);try{return r.apply(this,arguments)}catch(e){var o=e;throw"string"==typeof o&&(o=new String(o)),o._rollbarContext=n()||{},o._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=o,o}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(o){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureDomContentLoaded,captureLoad".split(","),f=0;f<u.length;++f)t.prototype[u[f]]=l(u[f]);r.exports={setupShim:a,Rollbar:p}},function(r,o){"use strict";function e(r,o,e){if(r){var t;"function"==typeof o._rollbarOldOnError?t=o._rollbarOldOnError:r.onerror&&!r.onerror.belongsToShim&&(t=r.onerror,o._rollbarOldOnError=t);var a=function(){var e=Array.prototype.slice.call(arguments,0);n(r,o,t,e)};a.belongsToShim=e,r.onerror=a}}function n(r,o,e,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),o.handleUncaughtException.apply(o,n),e&&e.apply(r,n)}function t(r,o,e){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var e=r.reason,n=r.promise,t=r.detail;!e&&t&&(e=t.reason,n=t.promise),o&&o.handleUnhandledRejection&&o.handleUnhandledRejection(e,n)};n.belongsToShim=e,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}function a(r,o,e){if(r){var n,t,a="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<a.length;++n)t=a[n],r[t]&&r[t].prototype&&l(o,r[t].prototype,e)}}function l(r,o,e){if(o.hasOwnProperty&&o.hasOwnProperty("addEventListener")){for(var n=o.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(o,e,t){n.call(this,o,r.wrap(e),t)};t._rollbarOldAdd=n,t.belongsToShim=e,o.addEventListener=t;for(var a=o.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,o,e){a.call(this,r,o&&o._rollbar_wrapped||o,e)};l._rollbarOldRemove=a,l.belongsToShim=e,o.removeEventListener=l}}r.exports={captureUncaughtExceptions:e,captureUnhandledRejections:t,wrapGlobals:a}},function(r,o){"use strict";function e(r,o){this.impl=r(o,this),this.options=o,n(e.prototype)}function n(r){for(var o=function(r){return function(){var o=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,o)}},e="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureDomContentLoaded,captureLoad".split(","),n=0;n<e.length;n++)r[e[n]]=o(e[n])}e.prototype._swapAndProcessMessages=function(r,o){this.impl=r(this.options);for(var e,n,t;e=o.shift();)n=e.method,t=e.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],e.ts]):this[n].apply(this,t));return this},r.exports=e},function(r,o){"use strict";r.exports=function(r){return function(o){if(!o&&!window._rollbarInitialized){r=r||{};for(var e,n,t=r.globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;e=window._rollbarShims[i++];)n||(n=e.handler),e.handler._swapAndProcessMessages(l,e.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
-</script>
-
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-75628175-2', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
-</head>
+# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &#34;m2 container ready!&#34; image: alpine volumes: - /root/.m2 - ./:/opt/src ; file build."/>
 
 
-<body class='page type-posts'>
-  <div class='site'>
-
-    <a class='screen-reader' href='#main'>Skip to Content</a>
-
-    <header id='header' class='header-container'>
-      <div class='header site-header'>
-        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
-  <ul class='main-menu'>
-  <li>
-      <a href='/'>Blog</a>
-    </li>
-  <li>
-      <a href='/about/'>About</a>
-    </li>
-  
-  </ul>
-</nav>
-
-        <div class='header-info'>
-          
-          <p class='site-title title'>Darong Mean</p>
-          
-          <p class='site-description subtitle'>Programmer - (Procrastinating) Blogger - (Casual) Gamer</p>
-        </div>
-      </div>
-    </header>
+<meta itemprop="name" content="How to use boot-clj and nREPL with Docker">
+<meta itemprop="description" content="There&rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
+Here&rsquo;s the final configuration that worked.
+# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &#34;m2 container ready!&#34; image: alpine volumes: - /root/.m2 - ./:/opt/src ; file build."><meta itemprop="datePublished" content="2017-04-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-04-20T00:00:00+00:00" />
+<meta itemprop="wordCount" content="291"><meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png"/>
+<meta itemprop="keywords" content="" />
 
 
-<main id='main' class='main'>
-  <article lang='en' class='entry'>
-    <header class='header-container'>
-  <div class='header entry-header'>
-    <div class='header-info'>
-      <h1 class='title'>How to use boot-clj and nREPL with Docker</h1>
-      
+    <title>How to use boot-clj and nREPL with Docker || Darong Mean</title>
+    <link rel="canonical" href="https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/" />
 
-    </div>
     
-<div class='meta'>
-  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-  <line x1="16" y1="2" x2="16" y2="6"/>
-  <line x1="8" y1="2" x2="8" y2="6"/>
-  <line x1="3" y1="10" x2="21" y2="10"/>
-  
-</svg>
-<span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-04-20T00:00:00Z'>2017, Apr 20</time>
-</span>
 
-  
-  
-<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <circle cx="12" cy="12" r="10"/>
-  <polyline points="12 6 12 12 15 15"/>
-  
-</svg>
-2 mins read
-</span>
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<script type="text/javascript" src="/js/main.js"></script>
 
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
 
-</div>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+<script async src="https://cdn.panelbear.com/analytics.js?site=5Ms17CYbCwv"></script>
+<script>
+    window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+    panelbear('config', { site: '5Ms17CYbCwv' });
+</script>
+  </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="en-us">
+  <div class="nav-bkg drop-shadow">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="/" >Darong Mean</a>
+      <span class="divider">/ </span>
+          <a href="/posts/">Posts</a>
+      <ul class="list-unstyled right-links">
 
+          <li>
+            <a href="/posts/">
+              <span class="post-title">archive</span>
+            </a>
+          </li>
 
+          <li>
+            <a href="/about/">
+              <span class="post-title">about</span>
+            </a>
+          </li>
+
+</ul>
+
+    </nav>
   </div>
-</header>
-
-    
-    
-
-    <div class='entry-content'>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">How to use boot-clj and nREPL with Docker</h1>
+  <meta itemprop="headline" content="How to use boot-clj and nREPL with Docker" />
   
-
-<p>There&rsquo;s a great post about <a href="http://blog.dominic.io/vagrant-docker-and-clojure/" target="_blank">using clojure with docker.</a> I followed the post with a twist. I used <code>boot-alpine</code> image[<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>] and <code>docker-compose</code> instead of <code>Vagrant</code>.</p>
-
+  
+    
+      <div class="post-date"><span itemprop="datePublished">April 20, 2017</span></div>
+      <meta itemprop="dateModified" content="April 20, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>There&rsquo;s a great post about <a href="http://blog.dominic.io/vagrant-docker-and-clojure/">using clojure with docker.</a> I followed the post with a twist. I used <code>boot-alpine</code> image[<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>] and <code>docker-compose</code> instead of <code>Vagrant</code>.</p>
 <p>Here&rsquo;s the final configuration that worked.</p>
-
-<pre><code># file docker-compose.yml
-version: '2'
+<pre tabindex="0"><code># file docker-compose.yml
+version: &#39;2&#39;
 services:
   bootclj:
     command: boot dev
@@ -140,151 +143,95 @@ services:
       - m2
     working_dir: /opt/src
   m2:
-    command: echo &quot;m2 container ready!&quot;
+    command: echo &#34;m2 container ready!&#34;
     image: alpine
     volumes:
       - /root/.m2
       - ./:/opt/src
-</code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure"><span style="color:#75715e">; file build.boot</span>
-(deftask development []
-  (task-options!
-    cljs {<span style="color:#e6db74">:optimizations</span>    <span style="color:#e6db74">:none</span>
-          <span style="color:#e6db74">:source-map</span>       true
-          <span style="color:#e6db74">:compiler-options</span> {<span style="color:#e6db74">:devcards</span> true}}
-    start-repl {<span style="color:#e6db74">:ip</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9007</span>}
-    cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}
-    reload {<span style="color:#e6db74">:on-jsload</span> <span style="color:#e6db74">&#39;timer.app/reload</span>
-            <span style="color:#e6db74">:port</span>      <span style="color:#ae81ff">9011</span>}
-    serve {<span style="color:#e6db74">:port</span> <span style="color:#ae81ff">3000</span>})
-  identity)</code></pre></div>
-<h2 id="challenges-i-faced">Challenges I faced</h2>
-
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#75715e">; file build.boot</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">deftask</span> development []
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">task-options!</span>
+</span></span><span style="display:flex;"><span>    cljs {<span style="color:#e6db74">:optimizations</span>    <span style="color:#e6db74">:none</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">:source-map</span>       true
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">:compiler-options</span> {<span style="color:#e6db74">:devcards</span> true}}
+</span></span><span style="display:flex;"><span>    start-repl {<span style="color:#e6db74">:ip</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9007</span>}
+</span></span><span style="display:flex;"><span>    cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}
+</span></span><span style="display:flex;"><span>    reload {<span style="color:#e6db74">:on-jsload</span> <span style="color:#e6db74">&#39;timer.app/reload</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">:port</span>      <span style="color:#ae81ff">9011</span>}
+</span></span><span style="display:flex;"><span>    serve {<span style="color:#e6db74">:port</span> <span style="color:#ae81ff">3000</span>})
+</span></span><span style="display:flex;"><span>  identity)
+</span></span></code></pre></div><h2 id="challenges-i-faced">Challenges I faced</h2>
 <p>Being a beginner in both boot-clj and Docker, I bumped into the following issues.</p>
-
-<h3 id="i-couldn-t-connect-to-nrepl-running-in-docker-2">I couldn&rsquo;t connect to nREPL running in Docker[<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>].</h3>
-
+<h3 id="i-couldnt-connect-to-nrepl-running-in-docker2">I couldn&rsquo;t connect to nREPL running in Docker[<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>].</h3>
 <p>I got the following error when I used Cursive remote repl to connect.</p>
-
-<pre><code>Connecting to remote nREPL server...
+<pre tabindex="0"><code>Connecting to remote nREPL server...
 Error connecting to localhost:9009 - class java.net.ConnectException: Connection refused
-</code></pre>
-
-<p>By going through document and looking at the source code[<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup>], I found out that I need to run two tasks to have browser repl working. The task <code>cljs-repl</code> starts a repl server and the task <code>start-repl</code> connects the repl server to browser.</p>
-
-<p>The repl server listens to loopback interface[<sup class="footnote-ref" id="fnref:4"><a href="#fn:4">4</a></sup>] by default. I used the <code>bind</code> nrepl option to override this setting like the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-clojure" data-lang="clojure">cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}</code></pre></div>
-<h3 id="boot-downloaded-dependencies-everytime-i-rebuilt-docker-images">Boot downloaded dependencies everytime I rebuilt docker images.</h3>
-
+</code></pre><p>By going through document and looking at the source code[<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>], I found out that I need to run two tasks to have browser repl working. The task <code>cljs-repl</code> starts a repl server and the task <code>start-repl</code> connects the repl server to browser.</p>
+<p>The repl server listens to loopback interface[<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>] by default. I used the <code>bind</code> nrepl option to override this setting like the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}
+</span></span></code></pre></div><h3 id="boot-downloaded-dependencies-everytime-i-rebuilt-docker-images">Boot downloaded dependencies everytime I rebuilt docker images.</h3>
 <p>I used data container to store <code>.m2</code> repositories. I just use the following command to rebuild and start the image:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker-compose stop bootclj 
-docker-compose rm bootclj
-docker-compose create bootclj
-docker-compose start bootclj</code></pre></div>
-<hr />
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose stop bootclj 
+</span></span><span style="display:flex;"><span>docker-compose rm bootclj
+</span></span><span style="display:flex;"><span>docker-compose create bootclj
+</span></span><span style="display:flex;"><span>docker-compose start bootclj
+</span></span></code></pre></div><hr>
 <p>Footnote:</p>
-<div class="footnotes">
-
-<hr />
-
+<div class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">1: <a href="https://hub.docker.com/_/clojure/" target="_blank">link to official Docker image for Clojure</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2">2: <code>adzerk/boot-cljs-repl</code> version <code>0.3.3</code> is used in this post
- <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
-<li id="fn:3">3: <a href="https://github.com/adzerk-oss/boot-cljs-repl/blob/master/src/adzerk/boot_cljs_repl.clj#L204" target="_blank">boot_cljs_repl.clj</a> and <a href="https://github.com/boot-clj/boot/blob/2.6.0/boot/core/src/boot/task/built_in.clj#L371" target="_blank">built_in.clj</a>
- <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
-<li id="fn:4">4: <a href="https://clojure.org/reference/repl_and_main#_launching_a_socket_server" target="_blank">https://clojure.org/reference/repl_and_main#_launching_a_socket_server</a>
- <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+<li id="fn:1">
+<p>1: <a href="https://hub.docker.com/_/clojure/">link to official Docker image for Clojure</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>2: <code>adzerk/boot-cljs-repl</code> version <code>0.3.3</code> is used in this post&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>3: <a href="https://github.com/adzerk-oss/boot-cljs-repl/blob/master/src/adzerk/boot_cljs_repl.clj#L204">boot_cljs_repl.clj</a> and <a href="https://github.com/boot-clj/boot/blob/2.6.0/boot/core/src/boot/task/built_in.clj#L371">built_in.clj</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>4: <a href="https://clojure.org/reference/repl_and_main#_launching_a_socket_server">https://clojure.org/reference/repl_and_main#_launching_a_socket_server</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
 </div>
 
-</div>
-
-    
-<footer class='entry-footer-container'>
-  <div class='entry-footer'>
-  
   </div>
-</footer>
+</article>
 
-
-  </article>
-  
-<nav class='entry-nav-container'>
-  <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/challenges-java-flame-graphs-introduction/'>
-        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="20" y1="12" x2="4" y2="12"/>
-  <polyline points="10 18 4 12 10 6"/>
-  
-</svg>
- Previous</span>
-        <span class='screen-reader'>Previous post: </span>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</a>
-    </div><div class='next-entry'>
-      <a href='/post/sum-type-or-union-type/'>
-        <span class='screen-reader'>Next post: </span>Sum Type/Union Type<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
-    </div></div>
-</nav>
+  <style type="text/css">
+	.content-container-narrow-pad {
+		margin-bottom: 5em;
+	}
+</style>
 
   
-</main>
-
-    <footer id='footer' class='footer-container'>
-      <div class='footer'>
-        <div class='social-menu-container'>
-  <nav aria-label='Social Menu'>
-    <ul class='social-menu'><li>
-        <a href='https://github.com/darongmean' target='_blank' rel='noopener'>
-          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-  
-</svg>
-</a>
-      </li><li>
-        <a href='https://twitter.com/darong_mean' target='_blank' rel='noopener'>
-          <span class='screen-reader'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-  
-</svg>
-</a>
-      </li><li>
-        <a href='https://linkedin.com/in/darongm' target='_blank' rel='noopener'>
-          <span class='screen-reader'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
-  
-</svg>
-</a>
-      </li></ul>
-  </nav>
-</div>
-        <div class='copyright'>
-  <p>
-        
-          
-        
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75 drop-shadow">
+      <nav class="flex-row">
       
+      <a href="https://darongmean.com/post/challenges-java-flame-graphs-introduction/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Challenges - Java Flame Graphs Introduction: Fire For Everyone!</span>
+      </a>
+      
+      
+        <a href="https://darongmean.com/post/sum-type-or-union-type/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Sum Type/Union Type</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
 
-       &copy; 2016-2018 Darong Mean 
-  </p>
-</div>
-
-      </div>
-    </footer>
-
-  </div><script src='/assets/js/main.5871befd.js'></script></body>
-
+  <div class="content-container vertical-margins">
+    <div class="flex-row flex-center">
+      <footer class="footer">
+      <span>© 2016-2022 <a href="/">Darong Mean</a></span>
+      <span>Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &amp;
+        <a href="https://github.com/capnfabs/paperesque" rel="noopener" target="_blank">paperesque</a>
+      </span>
+      </footer>
+    </div>
+  </div>
+  </body>
+  <script type="module" src="https://cdn.skypack.dev/pin/@hotwired/turbo@v7.2.4-ZifPufG8LWXS2LFpHP7B/mode=imports,min/optimized/@hotwired/turbo.js"></script>
 </html>
-

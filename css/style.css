@@ -1,663 +1,646 @@
-/* Reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-/* Clearfix */
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.hidden { display: none; }
-
-/* Icons */
-@font-face {
-	font-family: 'icons';
-		src: url('../fonts/icons.eot');
-		src: url('../fonts/icons.eot#iefix') format('embedded-opentype'),
-		url('../fonts/icons.woff') format('woff'),
-		url('../fonts/icons.ttf') format('truetype'),
-		url('../fonts/icons.svg#icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
+body {
+  -webkit-font-smoothings: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
-	font-family: "icons";
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-	display: inline-block;
-	text-decoration: inherit;
-	text-align: center;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1em;
-}
-.icon-facebook:before { content: '\e802'; }
-.icon-facebook-squared:before { content: '\e800'; }
-.icon-twitter:before { content: '\e801'; }
-.icon-twitter-1:before { content: '\e804'; }
-.icon-facebook-circled:before { content: '\e805'; }
-.icon-twitter-circled:before { content: '\e806'; }
-.icon-facebook-rect:before { content: '\e803'; }
-
-/* Spacing */
-.post h1, h3, h4, h5, p, .post-body ul, pre {
-margin-bottom: 20px;
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  background-color: #eeeeee;
+  hyphens: none; /* reset changes from <p> */
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  word-wrap: break-word;
+  /* border-radius: 4px; */
 }
 
-/* Base */
-html, body { height: 100%; }
+/* Reset these values when there's code inside a pre. Pre handles the styling then.*/
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 5px -5px #777777;
+  max-width: 100%;
+  /* These two copied from chroma theme (syntax.css) */
+  color: #f8f8f2;
+  background-color: #272822;
+}
+
+pre,
+code {
+  font-family: monocode, monospace;
+  -webkit-font-smoothings: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lora', serif;
+}
+
+h1#title {
+  /*Some UA stylesheets put h1 to 1.5em when in an article, so we reset it back for our title here.*/
+  font-size: 2em;
+}
 
 body {
-	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #666;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
 }
 
-h1 {
-	font-size: 30px;
-	letter-spacing: -1px;
-	color: #222;
-	font-weight: bold;
+.content-container {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-h2 {
-	font: italic 19px/1.3em Georgia,serif;
-	color: #bbb;
+.content-container-narrow-pad {
+  padding: 0.5em;
 }
 
-.profile #wrapper {
-	padding: 100px 40px 0px;
-	max-width: 600px;
-	margin: 0 auto;
+.v-center {
+  align-items: center;
 }
 
-.profile #header {
-	padding-bottom: 40px;
-	text-align: center;
-	position: relative;
+.look-sheet-bkg {
+  background-color: white;
 }
 
-.profile #avatar {
-	display: inline-block;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	margin-bottom: 20px;
+@media(min-width: 720px) {
+  /* Make everything 10% smaller! */
+  html {
+    font-size: 14.4px;
+  }
+
+  .content-container {
+    /* ACHTUNG:
+    Images are scaled in the fitfigure shortcode with an assumption that the
+    page is 652px wide. If you change this value, remeasure and change the value
+    there too. */
+    width: 45rem;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 0 auto;
+  }
+
+  .content-container-narrow-pad {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 45rem;
+    margin: 0 auto;
+  }
+
+  .bottom-links {
+    border: 1px solid #ccc;
+    border-bottom: 0px;
+  }
+
+  .look-sheet {
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 5px -5px #777777;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-height: 0px;
+    background-color: white;
+  }
+
+  .look-sheet-bkg {
+    background-color: #fffdf7;
+  }
 }
 
-.profile h1 {
-	font-weight: 400;
-	letter-spacing: 0px;
-	font-size: 20px;
-	color: #222;
+figure.smaller {
+  max-width: 67%;
 }
 
-.profile h2 {
-	font-size: 20px;
-	  font-weight: 300;
-	  color: #aaa;
-	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	  font-style: normal;
-
+.look-sheet-border {
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 5px -5px #777777;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  min-height: 0px;
 }
 
-nav.main-nav {
-	padding: 20px 20px 0;
-
-	/*max-width: 600px;*/
-	/*width:100%;*/
-	background: #fff;
-	background: rgba(255,255,255,.90);
-	margin: 0 auto;
-	text-align: right;
-	/*position: fixed;*/
-	z-index: 100;
-}
-
-nav.main-nav a {
-	top: 8px;
-	right: 6px;
-	padding: 8px 12px;
-	color: #5badf0;
-	font-size: 13px;
-	/*font-weight: bold;*/
-	line-height: 1.35;
-	border-radius: 3px;
-
-}
-nav.main-nav a.cta {
-	background: #5badf0;
-	color: #fff;
-	margin-left: 12px;
-}
-
-#wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 60px 40px 100px 40px;
-}
-
-#wrapper.home {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 0px 40px 20px 40px;
-}
-
-.home #avatar {
-	float: right;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-}
-
-/* Typography */
-/*Accent color*/
-a,
-#title,
-#post-list a:hover,
-#post-list li:hover .dates,
-#title:hover {
-	text-decoration: none;
-	color: #5badf0;
-	color: #5694f1;
-}
-
-p a { color: #5694f1; }
-
-/*Transitions*/
-a,
-#post-nav a,
-#post-list a	{
-	-webkit-transition: all 0.15s ease;
-	-moz-transition: all 0.15s ease;
-	-ms-transition: all 0.15s ease;
-	-o-transition: all 0.15s ease;
-	transition: all 0.15s ease;
-}
-
-ul 	{ margin:0; padding:0; margin-bottom: 20px; }
-li	{ list-style-type:circle; list-style-position:inside; }
-
-/* Line Height */
-#post-body, p { line-height:1.7; }
-
-b, strong { font-weight: 500;
-  color: #1E2025; }
-em, i { font-style: italic; }
-
-#title {
-	display: inline-block;
-	line-height: 100%;
-	font-weight: 500;
-	font-size: 19px;
-	margin: 0;
-	padding-bottom: 20px;
-}
-
-.description {
-	float: right;
-	font: italic 14px/1.4em Georgia,serif;
-	color: #aaa;
-}
-
-
-
-.home h1 {
-	font-size: 30px;
-	letter-spacing: -1px;
-	color: #222;
-	font-weight: bold;
-}
-
-.home h2 {
-	font: italic 19px/1.3em Georgia,serif;
-	color: #bbb;
-}
-
-.post header {
-	text-align:center;
-
-}
-
-.post h1 {
-	margin-bottom: 20px;
-	color: #222;
-	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
-}
-
-.post h2 {
-	margin-bottom: 40px;
-	  font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
-	  color: #111;
-}
-
-
-.post h2.headline {
-	/*font: italic 22px/1.3em Georgia,serif;*/
-	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	margin: -5px 0 40px 0;
-	color: #b2b9be;
-	  font-size: 13px;
-	  text-transform: uppercase;
-	  letter-spacing: 2px;
-	  /*margin-top: 15px;*/
-	  display: inline-block;
-}
-
-#post-list h2 {
-	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #aaa;
-	max-width: 400px;
-	margin-top: 2px;
-}
-
-h3, h4, h5 { color:#333; }
-
-h3 { font-size:20px; font-weight: 400; }
-h4 { font-size:16px; font-weight:bold; }
-h5 { font-size:15px; font-weight: bold; }
-
-h6 {
-	font-size: 13px;
-	font-weight: bold;
-	color: #666;
-	margin-bottom: 6px;
-}
-
-p.small {
-	color: #bbb;
-	font-size: 14px;
-	line-height: 1.5;
-	display: block;
-	text-align: center;
-	margin-top: 20px;
+.article-pad-v {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 blockquote {
-	padding-left: 15px;
-	border-left: 3px solid #eee;
+  border-left: #777 0.25em solid;
+  padding: 0 1.25em;
+  margin: 2em 0 2em 1em;
+}
+
+.nav-bkg {
+  color: white;
+  background: #00223E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #00223E 80%, #FFA17F 80%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(135deg, #00223E 80%, #FFA17F 80%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.nav-bkg-50 {
+  color: white;
+  background: #00223E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #00223E 50%, #FFA17F 50%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(135deg, #00223E 50%, #FFA17F 50%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.drop-shadow {
+  box-shadow: 0 5px 5px -5px #777777;
+}
+
+.nav-bkg a {
+  text-decoration: underline;
+}
+
+.pagewide-bar-padding {
+  padding: 0.5em 1em;
+}
+
+nav a, nav a:hover, nav a:visited {
+  color: white;
+}
+
+.post-date {
+  color: #777;
+}
+
+.post-tags, .post-tags a, .post-tags a:hover, .post-tags a:visited {
+  color: #777;
+}
+
+.margin-top-2em {
+  margin-top: 2em;
+}
+
+.article-body h2,.article-body h3 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+kbd {
+  background-color: #333;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 95%;
+  white-space: nowrap;
+}
+
+figure {
+  margin: 2em auto;
+  display: table;
+}
+
+.squash-bottom {
+  margin-bottom: 0;
+}
+
+.squash-top {
+  margin-top: 0;
+}
+
+.twoup.squash-bottom figure {
+  margin-bottom: 0;
+}
+
+.twoup.squash-top figure {
+  margin-top: 0;
+}
+
+.twoup {
+  display: flex;
+}
+.twoup figure {
+  max-width: 48%;
+  max-height: 42.5vh;
+  display: inline-block;
+}
+
+.twoup figure:first-child {
+  margin-left: 0;
+}
+
+.twoup figure:last-child {
+  margin-right: 0;
+}
+
+figure:not(.no-border) video, figure:not(.no-border) img, figure:not(.no-border) object, figure:not(.no-border).style-tables table {
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 5px -5px #777777;
+  max-width: 100%;
+  background-color: white;
+  max-height: 85vh;
 }
 
 hr {
-	display: block;
-	border: none;
-	height: 1px;
-	margin: 40px auto;
-	background: #eee;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #AAA;
+  margin: 2.5em 3em;
 }
 
-span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
-
-pre	{
-	font-family:Menlo, Monaco, Courier;
-	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
-	padding:20px;
-	background-color:#fdfdfd;
-	/*font-size:14px;*/
-	overflow:auto;
-	border-radius: 3px;
-	background: #272b2d;
-	  font-family: 'Source Code Pro',Menlo,monospace;
-	  font-size: 13px;
-	  line-height: 1.5em;
-	  font-weight: 500;
-	color: #d0d4d7;
-
+body {
+  background-color: #fffdf7;
 }
 
-table {
-	width: 100%;
-	margin: 40px 0;
-	border-collapse: collapse;
-	font-size: 13px;
-	line-height: 1.5em;
+figcaption {
+  margin-top: 0.75em;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.75em;
+  color: #5e5e5e;
 }
 
-th,td {
-	text-align: left;
-	padding-right: 20px;
-	vertical-align: top;
+/*
+The figure is handling the margin here, its last child doesn't need to.
+This is a side-effect of using display: table on figure. This is gross and
+will have side-effects if you have multiple nested elements under the figcaption I think.
+*/
+figure figcaption :last-child {
+  margin-bottom: 0;
 }
 
-table td,td {
-	border-spacing: none;
-	border-style: solid;
-	padding: 10px 15px;
-	border-width: 1px 0 0 0;
+.footnotes {
+  margin-top: 4em;
+  font-size: 85%;
 }
 
-tr>td {
-	border-top: 1px solid #eaeaea;
+.footnotes hr {
+  margin-bottom: 1em;
 }
 
-tr:nth-child(odd)>td {
-	background: #fcfcfc;
+.footnotes li {
+  margin: 0 0 12px;
 }
 
-thead th,th {
-	text-align: left;
-	padding: 10px 15px;
-	height: 20px;
-	font-size: 13px;
-	font-weight: bold;
-	color: #444;
-	border-bottom: 1px solid #dadadc;
-	cursor: default;
-	white-space: nowrap;
+twitter-widget {
+  /*
+  Have to use important here because the twitter oembed puts the styles in the
+  style attribute.
+  */
+  margin: 2em auto !important;
 }
 
-img {
-	max-width: 100%;
-	border-radius: 3px;
+.list-unstyled {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
-/* Made with Cactus Badge */
-#badge {
-	position: absolute;
-	bottom: 8px;
-	right: 8px;
-	height: 48px;
-	width: 48px;
+.flex-row {
+  display: flex;
+  justify-content: space-between;
 }
 
-/*=========================================
-Post List
-=========================================== */
-#archive-list {
-	margin-top: 100px;
+.flex-row.flex-center {
+  justify-content: center;
 }
 
-#post-list {
-	margin-bottom: 0;
+a.no-underline:hover {
+  text-decoration: none;
 }
 
-#post-list li,#archive-list li {
-	border-top: 1px solid #eee;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	list-style-type: none;
-	margin-bottom: 0;
+a.no-underline:hover .re-underline {
+  text-decoration: underline;
 }
 
-#post-list li:last-child {
-	border-bottom: 1px solid #eee;
-}
-
-#post-list a {
-	color: #333;
-	display: block;
-	font: bold 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-}
-
-#post-list .dates {
-	float: right;
-	position: relative;
-	top: 1px;
-	font: 300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #bbb;
-}
-
-#post-list-footer {
-	border-top: 1px solid #eee;
-	margin-top: 20px;
-	padding-top: 100px;
-}
-
-#archive-link {
-	display: inline-block;
-	font-size: 13px;
-	font-weight: bold;
-	border-radius: 4px;
-	padding: 3px 10px 6px;
-	box-shadow: 0 0 0 1px hsla(207,83%,80%,1);
-}
-
-#archive-link:hover {
-	background: #5694f1;
-	color: #fff;
-	box-shadow: 0 0 0 1px #5694f1;
-}
-
-#archive-link span {
-	position: relative;
-	top: 0;
-	font-size: 17px;
-}
-
-#footer {
-	padding: 40px 0 0 0;
-}
-
-/* Post Page */
-.post {
-	margin: 80px 0 0 0;
-}
-
-#post-meta {
-	font-size: 13px;
-	font-weight: bold;
-	line-height: 1.4;
-	border-top: 1px solid #eee;
-	padding-top: 40px;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
-	margin-top: 40px;
-	color:#444;
-	border-bottom: 1px solid #eee;
-}
-
-#post-meta div span {
-	color: #aaa;
-	font-weight: 500;
-	display: block;
-}
-
-#post-meta div span.dark {
-	color: #1E2025;
-
-}
-
-#post-meta div {
-	margin: 0 25px 0 0;
-	float: left;
-}
-
-#sharing {
-	float: right;
-	margin: -2px;
-}
-
-#sharing a {
-	font-size: 20px;
-	font-size: 23px;
-	margin-left: 1px;
-	margin-top: 4px;
-	color: #d4d4d4;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#sharing a:hover {
-	/*color: #444;*/
-	opacity: 0.8;
-}
-
-/* Post Navigation */
-#post-nav {
-	text-align:center;
-	font-size:13px;
-	font-weight:500;
-	margin-top: 20px;
-}
-
-#post-nav span {
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	-ms-transition: all 0.1s linear;
-	-o-transition: all 0.1s linear;
-	transition: all 0.1s linear;
-	position: relative;
-}
-
-#post-nav span.prev {
-	float: left;
-}
-
-#post-nav span.next {
-	float: right;
-}
-
-#post-nav span .arrow {
-	position: relative;
-	padding: 1px;
-}
-
-#post-nav span.prev:hover .arrow {
-	left: -4px;
-}
-
-#post-nav span.next:hover .arrow {
-	right: -4px;
-}
-
-#post-nav span.prev:hover {
-	left: -3px;
-}
-
-#post-nav span.next:hover {
-	right: -3px;
-}
-
-/* Archive */
-h1.archive {
-	margin-bottom: 0px;
-}
-
-h2.month {
-	width: 100%;
-	font: bold 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;
-	text-transform: uppercase;
-	margin-top: 40px;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #eee;
-}
-
-#archive-list li:last-child {
-	margin-bottom: 0;
-}
-
-#archive-list a {
-	display: block;
-	font: bold 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #333;
-}
-
-#archive-list .dates {
-	float: right;
-	position: relative;
-	top: 1px;
-	font: 300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #bbb;
-}
-
-#archive-list li a:hover,#archive-list li:hover .dates {
-	color: #5694f1;
-}
-
-#post-meta img.avatar {
-  height: 36px;
-  width: 36px;
-  float: left;
-  border-radius: 50%;
-  margin-top: 3px;
-  margin-right: 20px;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
-}
-
-#post-list.archive.readmore h3{
-
-	  font: 400 20px "Helvetica Neue", Helvetica,Arial,sans-serif;
-	  margin-bottom: 30px;
-}
-
-#post-list.archive.readmore a{
-	font: 400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #5694f1;
-}
-
-#post-list.archive.readmore a:hover{
-	opacity: 0.8;
-}
-
-#post-list.archive.readmore .dates{
-	font: 300 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
-}
-#sharing a.facebook {
-  background: #4361b3;
-}
-#sharing a.twitter {
-  background: #4fafed;
-}
-
-#sharing a {
-  font-size: 20px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #fff;
-  padding: 6px 10px;
+a.btn-dashed {
+  border: dashed 1px #777;
   border-radius: 4px;
-  margin-left: 2px;
+  padding: 0.5em;
 }
 
-/* Media Queries */
-@media screen and (max-width: 540px) {
-	#wrapper { padding:20px 20px 20px 20px;}
-	.post { margin: 40px 0; }
+a.btn-dashed:hover {
+  box-shadow: 0 5px 5px -5px #777777;
+  border: solid 1px #777;
+  text-decoration: none;
+  background-color: #77777722;
+  transition: all 0.1s;
+}
 
-	#post-list, #archive-list { margin-top: 0; }
-	#post-meta { margin-top: 60px; }
+.vertical-margins {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
-	#title { font-size: 17px; }
-	#post-list .dates { display: none; }
+.list-of-titles .post-title {
+  color: black;
+  font-size: 1.5em;
+}
+.list-of-titles li a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+  /* hacks so that the text doesn't move unintentionally */
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
 
-	#post-list-footer { margin-top: 20px; padding-top: 40px; }
+.list-of-titles li a:hover {
+  background-color: white;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-shadow: 0 5px 5px -5px #777777;
+}
 
-	h1 { font-size: 26px; }
-	.post h2.headline { font-size: 13px; }
-	.post h1 { font-size:24px; }
-	.post h2 { font-size:20px; }
+.list-of-titles li a:hover .post-title {
+  text-decoration: underline;
+}
+
+.list-of-titles li:first-child a {
+  border-top: 1px solid #ccc;
+}
+
+.list-of-titles .post-meta {
+  font-size: 0.875em;
+  color: #777;
+}
+
+ul.right-links {
+  display: none;
+  float: right;
+}
+ul.right-links li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+@media(min-width: 440px) {
+  ul.right-links {
+    display: block;
+  }
+}
+
+.embed.rich, img {
+  max-width: 100%;
+}
+
+p {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.look-sheet-bkg.draft, .list-of-titles li.draft a:hover {
+  background: repeating-linear-gradient(     135deg,   white,   white 10px,   #ffd4a3 12px,   #ffd4a3 12px );
+}
+
+.list-of-titles li.draft {
+  background: repeating-linear-gradient(     135deg,    #fffdf7,   #fffdf7 10px,   #ffd4a3 12px,   #ffd4a3 12px );
+}
+
+.post-meta.draft {
+  font-weight: bold;
+}
+
+.text-1p5 {
+  font-size: 1.5em;
+}
+
+.text-0p75 {
+  font-size: 0.75em;
+}
+
+aside.article-aside {
+  background-color: #fffdf7;
+  padding: 0 1em;
+  margin-top: 3em;
+}
+
+aside.article-aside > p:first-child {
+  margin-top: 1rem;
+}
+
+aside.content-warning {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #777;
+  border-top: solid 1px #777;
+  border-bottom: solid 1px #777;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  display: inline-block;
+}
+
+aside.content-warning > p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+TODO: understand CSS so I don't need to do this insane thing. The idea here is
+that if an `aside` appears immediately after a heading, it should have close
+spacing, but if it appears after other content it should have sufficient spacing
+to make it look like a new section. I think we should theoretically be able to
+do that with margins, but I don't understand how they work enough yet.
+*/
+h2+aside.article-aside, h3+aside.article-aside, h4+aside.article-aside, h5+aside.article-aside {
+  margin-top: 0.5em;
+}
+
+/* If we've nested this inside something, we probably don't want to have the huge margin */
+h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0.5em;
+}
+
+.expander {
+  background-color: #fffdf7;
+  padding: 0 1em;
+  position: relative; /* anchor for the buttons */
+}
+
+.expander h2:first-child {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.expander .button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  line-height: 1.5;
+  border-radius: .25rem;
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  padding: .25rem .75rem;
+  font-size: .875rem;
+
+  color: white;
+  box-shadow: 0 5px 5px -5px #777777;
+  background: #00223E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #00223E 85%, #FFA17F 85%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(135deg, #00223E 85%, #FFA17F 85%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.expander .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.expander input.show:checked ~ .inner {
+  display:block;
+}
+
+.expander input.hide:checked ~ .inner {
+  display: none;
+}
+
+.expander input.show:checked ~ .button-show {
+  display: none;
+}
+
+.expander input.hide:checked ~ .button-hide {
+  display: none;
+}
+
+/*
+This cursed incantation works around a display bug in Firefox, where writing
+an emoji with default Emoji Presentation (e.g. 🐻) followed by a non-default
+emoji character (e.g. ↩) results in the latter being rendered with emoji
+presentation as well.
+
+This is only a problem on the newer Goldmark renderer, which I'm not using yet.
+*/
+a.footnote-backref::before {
+  content: ' ';
 }
 
 
-/* CUSTOM ADDITIONS */
+/* all this stuff is for header links */
 
-#social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.header-link {
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, white 20%);
+  color: grey;
+  fill: grey;
 }
 
-a.symbol {
-    color: #cdd4da;
-    font-size: 2rem;
-    text-decoration: none;
-    margin-right: 0.3rem;
+aside .header-link {
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #fffdf7 20%);
 }
 
-a.symbol:hover {
-    color: #BCD4DA;
+.header-link:hover {
+  text-decoration: none;
 }
 
-code { 
-	font-family:Menlo, Monaco, Courier; 
-	background-color:#EEE; font-size:14px; 
-	padding: 4px; 
-	font-weight: 600;
+/* Keep the selectors here in sync with site.js  */
+h2, h3, h4 {
+  position: relative;
+}
+
+h2:not(:hover) .header-link, h3:not(:hover) .header-link, h4:not(:hover) .header-link {
+  display: none;
+}
+
+.header-link svg {
+  height: 0.65em;
+  margin-bottom: 0.225em;
+  /* make these links easier to tap */
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+}
+
+/* end header links */
+
+/* this goes on the parent */
+#content {
+  position: relative;
+}
+
+.floating-footnotes {
+  width: 25em;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  /* The entire main article content, + the margins */
+  left: calc(100% + 2em);
+}
+
+.floating-footnotes hr {
+  display: none;
+}
+
+.floating-footnotes li[role=doc-endnote] p:last-child {
+  margin-bottom: 0;
+}
+
+a.timestamp {
+  border: solid 1px #007bff;
+  background: rgb(0,123,255);
+  background: linear-gradient(145deg, rgba(0,123,255,1) 60%, rgba(0,86,179,1) 100%);
+  color: white;
+  border-radius: 4px;
+  padding: 2px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+figure audio {
+  /*
+  Ok, you can't use 100% for this -- both Chrome and Firefox do _weird things_ if you try that.
+  So we hardcode a pixel value manually based on the page width.
+  */
+  width: 580px;
+  max-width: 100%;
+}
+
+article table {
+  margin: 2.5em auto;
+}
+
+article table td:not(:first-child), article table th:not(:first-child) {
+  padding-left: 2em;
+}
+
+article table thead tr {
+  border-bottom: 1px solid #00223E;
+}
+
+article table {
+  border-bottom: 1px solid #00223E;
+}
+
+article table thead th {
+  padding-bottom: 0.5em;
+  font-family: 'Lora', serif;;
+}
+
+article table tbody tr:first-child td {
+  padding-top: 0.75em;
+}
+
+article table tbody tr:last-child td {
+  padding-bottom: 0.75em;
+}
+
+article table td, article table th {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  vertical-align: top;
 }

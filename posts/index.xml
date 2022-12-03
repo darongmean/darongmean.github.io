@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Darong Mean</title>
     <link>https://darongmean.com/posts/</link>
     <description>Recent content in Posts on Darong Mean</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://darongmean.com/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://darongmean.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React-Native &amp; Clojurescript - ES6 Import/Export</title>
       <link>https://darongmean.com/post/react-native-cljs-es6-import-export/</link>
@@ -17,8 +14,8 @@
       
       <guid>https://darongmean.com/post/react-native-cljs-es6-import-export/</guid>
       <description>Disclaimer: This serie is my notes while I&amp;rsquo;m exploring ReactNative and Clojurescript ecosystems. I&amp;rsquo;ve never done any mobile development or anything related to XCode. I&amp;rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
- Table: ES6 Import to CLJS Require1
-   ES6 Import CLJS Require     import defaultExport from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :default defaultExport])   import * as name from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :as name])   import { export } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export)])   import { export as alias } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :rename {export alias}])   import { export1 , export2 } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export1 export2)])   import { export1 , export2 as alias2 , […​] } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export1) :rename {export2 alias2}])   import defaultExport, { export [ , […​] ] } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export) :default defaultExport])   import defaultExport, * as name from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :as name :default defaultExport])   import &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo;])    The :default option is currently only available in shadow-cljs, you can vote here to hopefully make it standard.</description>
+Table: ES6 Import to CLJS Require1
+ES6 Import CLJS Require import defaultExport from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :default defaultExport]) import * as name from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :as name]) import { export } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export)]) import { export as alias } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :rename {export alias}]) import { export1 , export2 } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export1 export2)]) import { export1 , export2 as alias2 , […​] } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export1) :rename {export2 alias2}]) import defaultExport, { export [ , […​] ] } from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :refer (export) :default defaultExport]) import defaultExport, * as name from &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo; :as name :default defaultExport]) import &amp;ldquo;module-name&amp;rdquo;; (:require [&amp;ldquo;module-name&amp;rdquo;]) The :default option is currently only available in shadow-cljs, you can vote here to hopefully make it standard.</description>
     </item>
     
     <item>
@@ -28,7 +25,7 @@
       
       <guid>https://darongmean.com/post/react-native-cljs-xcode/</guid>
       <description>Disclaimer: This serie is my notes while I&amp;rsquo;m exploring ReactNative and Clojurescript ecosystems. I&amp;rsquo;ve never done any mobile development or anything related to XCode. I&amp;rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
- There&amp;rsquo;s no suprise that I would encounter issues with XCode. Here are the issues I managed to solve so far.
+There&amp;rsquo;s no suprise that I would encounter issues with XCode. Here are the issues I managed to solve so far.
 Error running React Native app from terminal (iOS) Entered the command react-native ios, and I would get the following error</description>
     </item>
     
@@ -39,7 +36,7 @@ Error running React Native app from terminal (iOS) Entered the command react-nat
       
       <guid>https://darongmean.com/post/react-native-cljs-shadow-cljs/</guid>
       <description>Disclaimer: This serie is my notes while I&amp;rsquo;m exploring ReactNative and Clojurescript ecosystems. I&amp;rsquo;ve never done any mobile development or anything related to XCode. I&amp;rsquo;ve done some Clojurescript developments and this is my first time using shadow-cljs.
- TLDR; Create the project I installed npm, yarn, react-native-cli, XCode, shadow-cljs, and used the following commands to create the project.
+TLDR; Create the project I installed npm, yarn, react-native-cli, XCode, shadow-cljs, and used the following commands to create the project.
 react-native init FunanMobile cd FunanMobile yarn add --dev shadow-cljs mkdir -p cljs/hello vim cljs/hello/core.</description>
     </item>
     
@@ -52,8 +49,7 @@ react-native init FunanMobile cd FunanMobile yarn add --dev shadow-cljs mkdir -p
       <description>401 “Unauthorized” really means unauthenticated. You need valid credentials for me to respond to this request.
 403 “Forbidden” really means unauthorized. I understand your credentials, but sorry, you’re not allowed.
 Source https://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=FeSdFhsKGG0#t=394
- It seems the video is no longer available in Youtube :(
- </description>
+It seems the video is no longer available in Youtube :(</description>
     </item>
     
     <item>
@@ -63,8 +59,8 @@ Source https://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=FeSdFhs
       
       <guid>https://darongmean.com/post/deal-with-liferay-friendly-url-mapping/</guid>
       <description>Liferay has default url start with /web, /group and /user to identify if the page is public, private, or user’s private. The mappings can be changed by modify file portal-ext.properties and ROOT/WEB-INF/web.xml.
-portal-ext.properties  Note: company.default.home.url is set so that Liferay won’t try to open url /web/guest on startup.
- ROOT/WEB-INF/web.xml I’ve got weird error after edit web.xml and Liferay startup with errors. Try to delete temp and work folder of tomcat help resolve this issue.</description>
+portal-ext.properties Note: company.default.home.url is set so that Liferay won’t try to open url /web/guest on startup.
+ROOT/WEB-INF/web.xml I’ve got weird error after edit web.xml and Liferay startup with errors. Try to delete temp and work folder of tomcat help resolve this issue.</description>
     </item>
     
     <item>
@@ -75,17 +71,6 @@ portal-ext.properties  Note: company.default.home.url is set so that Liferay won
       <guid>https://darongmean.com/post/git-working-with-deleted-files/</guid>
       <description>Scenario: you notice that a file is deleted and you want to recover it.
 Find which commit delete the file git log -- docroot/user_bars/logo.png # show all changes of a file, work even if the file is deleted git log -1 -- docroot/user_bars/logo.png # limit the output of Git log to the last commit, i.e. the commit which delete the file; -1 to see only the last commit, use -2 to see the last 2 commits etc.</description>
-    </item>
-    
-    <item>
-      <title>HTML Anchor &lt;a&gt; - target attribute</title>
-      <link>https://darongmean.com/post/html-anchor-target-attribute/</link>
-      <pubDate>Sun, 26 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://darongmean.com/post/html-anchor-target-attribute/</guid>
-      <description>http://stackoverflow.com/a/8867079
-Using target=”_blank” will instruct the browser to create a new browser tab or window when the user clicks on the link.
-Using target=”_new” is technically invalid according to the specifications, but as far as I know every browser will behave the same way: - it will search for a tab or window with the context name “_new” - if a “_new” tab/window is found, then the URL is loaded into it - if it’s not found, a new tab/window is created with the context name “_new”, and the URL loaded into it</description>
     </item>
     
     <item>
@@ -101,18 +86,29 @@ if (params.get(“usersGroups”) instanceof Long) Although compiler will allow 
     </item>
     
     <item>
+      <title>HTML Anchor &lt;a&gt; - target attribute</title>
+      <link>https://darongmean.com/post/html-anchor-target-attribute/</link>
+      <pubDate>Sun, 26 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darongmean.com/post/html-anchor-target-attribute/</guid>
+      <description>http://stackoverflow.com/a/8867079
+Using target=”_blank” will instruct the browser to create a new browser tab or window when the user clicks on the link.
+Using target=”_new” is technically invalid according to the specifications, but as far as I know every browser will behave the same way:
+it will search for a tab or window with the context name “_new” if a “_new” tab/window is found, then the URL is loaded into it if it’s not found, a new tab/window is created with the context name “_new”, and the URL loaded into it Note target=”_new” will behave exactly the same as target=”new”, and the latter is valid HTML while the former is invalid HTML.</description>
+    </item>
+    
+    <item>
       <title>Naming Convention</title>
       <link>https://darongmean.com/post/naming-convention/</link>
       <pubDate>Sun, 26 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darongmean.com/post/naming-convention/</guid>
-      <description> as…  for explicit coercion method
- Ex: as.numeric(x)
- …?  for condition method. use is… or has… if the programming langauge doesn’t allow ? character.
- Ex: (collection? x)
- maybe…  for doing something if arguments are not nil
- Ex: (maybe-substitute header)
- </description>
+      <description>as… for explicit coercion method
+Ex: as.numeric(x)
+…? for condition method. use is… or has… if the programming langauge doesn’t allow ? character.
+Ex: (collection? x)
+maybe… for doing something if arguments are not nil
+Ex: (maybe-substitute header)</description>
     </item>
     
     <item>
@@ -136,7 +132,7 @@ In Haskell Use algebraic data types.</description>
       <guid>https://darongmean.com/post/how-to-use-boot-clj-and-nrepl-with-docker/</guid>
       <description>There&amp;rsquo;s a great post about using clojure with docker. I followed the post with a twist. I used boot-alpine image[1] and docker-compose instead of Vagrant.
 Here&amp;rsquo;s the final configuration that worked.
-# file docker-compose.yml version: &#39;2&#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &amp;quot;m2 container ready!&amp;quot; image: alpine volumes: - /root/.m2 - .</description>
+# file docker-compose.yml version: &amp;#39;2&amp;#39; services: bootclj: command: boot dev image: clojure:boot-alpine ports: - 9007:9007 - 9009:9009 - 9011:9011 - 3000:3000 volumes_from: - m2 working_dir: /opt/src m2: command: echo &amp;#34;m2 container ready!&amp;#34; image: alpine volumes: - /root/.m2 - ./:/opt/src ; file build.</description>
     </item>
     
     <item>
@@ -157,7 +153,7 @@ ERROR: No stack counts found Being a beginner, I don&amp;rsquo;t know what happe
       <pubDate>Sat, 31 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://darongmean.com/post/books-i-read-2016/</guid>
-      <description> November  The Phoenix Project  December  The Power of Now - A guide to spiritual enlightenment Are Your Lights On? - How to Know What The Problem Really Is  </description>
+      <description>November The Phoenix Project December The Power of Now - A guide to spiritual enlightenment Are Your Lights On? - How to Know What The Problem Really Is </description>
     </item>
     
     <item>
@@ -166,7 +162,7 @@ ERROR: No stack counts found Being a beginner, I don&amp;rsquo;t know what happe
       <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://darongmean.com/post/weekly-roundup-2016-12-24/</guid>
-      <description> Books  The Power of Now: Chapter 2 Are your lights on? Chapter 9  </description>
+      <description>Books The Power of Now: Chapter 2 Are your lights on? Chapter 9 </description>
     </item>
     
     <item>
@@ -175,8 +171,8 @@ ERROR: No stack counts found Being a beginner, I don&amp;rsquo;t know what happe
       <pubDate>Sat, 03 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://darongmean.com/post/weekly-roundup-2016-12-03/</guid>
-      <description> It&amp;rsquo;s been a procrastinated week. I have to pick myself up and get jobs done next week.
-Books  The Power of Now: Chapter 1  Projects  Learn to build custom text editor  </description>
+      <description>It&amp;rsquo;s been a procrastinated week. I have to pick myself up and get jobs done next week.
+Books The Power of Now: Chapter 1 Projects Learn to build custom text editor </description>
     </item>
     
     <item>
@@ -196,8 +192,8 @@ Projects TODO</description>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://darongmean.com/post/weekly-roundup-2016-11-19/</guid>
-      <description>Forget To-Do Lists, What You Really Need Are Anti-To-Do Lists   When researching 11 companies that suddenly went from average to outstanding, Jobs found that the single binding factor between them was the shift in exactly how big decisions were made. The strategy became what not to do rather than what to do.
-  BeckDesignRules   Kent Beck came up with his four rules of simple design while he was developing ExtremeProgramming in the late 1990&amp;rsquo;s.</description>
+      <description>Forget To-Do Lists, What You Really Need Are Anti-To-Do Lists When researching 11 companies that suddenly went from average to outstanding, Jobs found that the single binding factor between them was the shift in exactly how big decisions were made. The strategy became what not to do rather than what to do.
+BeckDesignRules Kent Beck came up with his four rules of simple design while he was developing ExtremeProgramming in the late 1990&amp;rsquo;s.</description>
     </item>
     
   </channel>

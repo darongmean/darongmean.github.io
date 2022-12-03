@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Darong Mean</title>
     <link>https://darongmean.com/tags/</link>
     <description>Recent content in Tags on Darong Mean</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 02 Sep 2017 14:31:13 +0700</lastBuildDate>
-    
-	<atom:link href="https://darongmean.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Sep 2017 14:31:13 +0700</lastBuildDate><atom:link href="https://darongmean.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

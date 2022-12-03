@@ -1,465 +1,947 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+	<meta name="generator" content="Hugo 0.106.0">
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta property='og:title' content='Darong Mean'>
-<meta property='og:description' content='Programmer - (Procrastinating) Blogger - (Casual) Gamer'>
-<meta property='og:url' content='https://darongmean.com/'>
-<meta property='og:site_name' content='Darong Mean'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2018-04-30T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.40.1" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://darongmean.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://darongmean.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://darongmean.com/favicon-16x16.png">
+<link rel="manifest" href="https://darongmean.com/site.webmanifest">
+<link rel="mask-icon" href="https://darongmean.com/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
-  <title>Darong Mean</title>
-  <link rel='canonical' href='https://darongmean.com/'>
-  
-    <link href="https://darongmean.com/index.xml" rel="alternate" type="application/rss+xml" title="Darong Mean" />
-  
-  
-  <link rel='icon' href='/images/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.f0e8df71.css'><link rel='stylesheet' href='/css/custom.css'>
+
+
+<meta name="keywords" content="">
+
+<meta property="og:title" content="Darong Mean" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://darongmean.com/" /><meta property="og:image" content="https://darongmean.com/images/avatar@2x.png"/>
+
+
+<meta property="og:site_name" content="Darong Mean" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="https://darongmean.com/images/avatar@2x.png"/>
+
+<meta name="twitter:title" content="Darong Mean"/>
+<meta name="twitter:description" content=""/>
+
+
+<meta itemprop="name" content="Darong Mean">
+<meta itemprop="description" content="">
+
+
+    <title>Darong Mean</title>
+    <link rel="canonical" href="https://darongmean.com/" />
+
+    <link rel="alternate" type="application/rss+xml" href="https://darongmean.com/index.xml" title="Darong Mean" />
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<script type="text/javascript" src="/js/main.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+<script async src="https://cdn.panelbear.com/analytics.js?site=5Ms17CYbCwv"></script>
 <script>
-    var _rollbarConfig = {
-        accessToken: "43aac4bbe89e471eb0c4e16dddc06414",
-        captureUncaught: true,
-        payload: {
-            environment: "production"
-        }
-    };
-    !function(r){function o(n){if(e[n])return e[n].exports;var t=e[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,o),t.loaded=!0,t.exports}var e={};return o.m=r,o.c=e,o.p="",o(0)}([function(r,o,e){"use strict";var n=e(1),t=e(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.2.7/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,o,e){"use strict";function n(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function t(r,o){this.options=r,this._rollbarOldOnError=null;var e=s++;this.shimId=function(){return e},window&&window._rollbarShims&&(window._rollbarShims[e]={handler:o,messages:[]})}function a(r,o){var e=o.globalAlias||"Rollbar";if("object"==typeof r[e])return r[e];r._rollbarShims={},r._rollbarWrappedError=null;var t=new p(o);return n(function(){o.captureUncaught&&(t._rollbarOldOnError=r.onerror,i.captureUncaughtExceptions(r,t,!0),i.wrapGlobals(r,t,!0)),o.captureUnhandledRejections&&i.captureUnhandledRejections(r,t,!0);var n=o.autoInstrument;return(void 0===n||n===!0||"object"==typeof n&&n.network)&&r.addEventListener&&(r.addEventListener("load",t.captureLoad.bind(t)),r.addEventListener("DOMContentLoaded",t.captureDomContentLoaded.bind(t))),r[e]=t,t})()}function l(r){return n(function(){var o=this,e=Array.prototype.slice.call(arguments,0),n={shim:o,method:r,args:e,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)})}var i=e(2),s=0,d=e(3),c=function(r,o){return new t(r,o)},p=d.bind(null,c);t.prototype.loadFull=function(r,o,e,t,a){var l=function(){var o;if(void 0===r._rollbarDidLoad){o=new Error("rollbar.js did not load");for(var e,n,t,l,i=0;e=r._rollbarShims[i++];)for(e=e.messages||[];n=e.shift();)for(t=n.args||[],i=0;i<t.length;++i)if(l=t[i],"function"==typeof l){l(o);break}}"function"==typeof a&&a(o)},i=!1,s=o.createElement("script"),d=o.getElementsByTagName("script")[0],c=d.parentNode;s.crossOrigin="",s.src=t.rollbarJsUrl,e||(s.async=!0),s.onload=s.onreadystatechange=n(function(){if(!(i||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){s.onload=s.onreadystatechange=null;try{c.removeChild(s)}catch(r){}i=!0,l()}}),c.insertBefore(s,d)},t.prototype.wrap=function(r,o,e){try{var n;if(n="function"==typeof o?o:function(){return o||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){e&&"function"==typeof e&&e.apply(this,arguments);try{return r.apply(this,arguments)}catch(e){var o=e;throw"string"==typeof o&&(o=new String(o)),o._rollbarContext=n()||{},o._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=o,o}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(o){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureDomContentLoaded,captureLoad".split(","),f=0;f<u.length;++f)t.prototype[u[f]]=l(u[f]);r.exports={setupShim:a,Rollbar:p}},function(r,o){"use strict";function e(r,o,e){if(r){var t;"function"==typeof o._rollbarOldOnError?t=o._rollbarOldOnError:r.onerror&&!r.onerror.belongsToShim&&(t=r.onerror,o._rollbarOldOnError=t);var a=function(){var e=Array.prototype.slice.call(arguments,0);n(r,o,t,e)};a.belongsToShim=e,r.onerror=a}}function n(r,o,e,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),o.handleUncaughtException.apply(o,n),e&&e.apply(r,n)}function t(r,o,e){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var e=r.reason,n=r.promise,t=r.detail;!e&&t&&(e=t.reason,n=t.promise),o&&o.handleUnhandledRejection&&o.handleUnhandledRejection(e,n)};n.belongsToShim=e,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}function a(r,o,e){if(r){var n,t,a="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<a.length;++n)t=a[n],r[t]&&r[t].prototype&&l(o,r[t].prototype,e)}}function l(r,o,e){if(o.hasOwnProperty&&o.hasOwnProperty("addEventListener")){for(var n=o.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(o,e,t){n.call(this,o,r.wrap(e),t)};t._rollbarOldAdd=n,t.belongsToShim=e,o.addEventListener=t;for(var a=o.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,o,e){a.call(this,r,o&&o._rollbar_wrapped||o,e)};l._rollbarOldRemove=a,l.belongsToShim=e,o.removeEventListener=l}}r.exports={captureUncaughtExceptions:e,captureUnhandledRejections:t,wrapGlobals:a}},function(r,o){"use strict";function e(r,o){this.impl=r(o,this),this.options=o,n(e.prototype)}function n(r){for(var o=function(r){return function(){var o=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,o)}},e="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureDomContentLoaded,captureLoad".split(","),n=0;n<e.length;n++)r[e[n]]=o(e[n])}e.prototype._swapAndProcessMessages=function(r,o){this.impl=r(this.options);for(var e,n,t;e=o.shift();)n=e.method,t=e.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],e.ts]):this[n].apply(this,t));return this},r.exports=e},function(r,o){"use strict";r.exports=function(r){return function(o){if(!o&&!window._rollbarInitialized){r=r||{};for(var e,n,t=r.globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;e=window._rollbarShims[i++];)n||(n=e.handler),e.handler._swapAndProcessMessages(l,e.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+    window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+    panelbear('config', { site: '5Ms17CYbCwv' });
 </script>
+  </head>
+  <body
+  class="look-sheet-bkg"
+  lang="en-us">
+  <div class="nav-bkg drop-shadow">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="/" >Darong Mean</a>
+      
+      <ul class="list-unstyled right-links">
 
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-75628175-2', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+          <li>
+            <a href="/posts/">
+              <span class="post-title">archive</span>
+            </a>
+          </li>
 
-</head>
+          <li>
+            <a href="/about/">
+              <span class="post-title">about</span>
+            </a>
+          </li>
 
+</ul>
 
-<body class='home type-page'>
-  <div class='site'>
+    </nav>
+  </div>
+  
+  <ul id="list" class="list-unstyled">
 
-    <a class='screen-reader' href='#main'>Skip to Content</a>
+    
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">React-Native &amp; Clojurescript - ES6 Import/Export <a href="/post/react-native-cljs-es6-import-export/">#</a></h1>
+  <meta itemprop="headline" content="React-Native &amp; Clojurescript - ES6 Import/Export" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">April 30, 2018</span></div>
+      <meta itemprop="dateModified" content="April 30, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <blockquote>
+<p>Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using <a href="http://shadow-cljs.org/">shadow-cljs</a>.</p>
+</blockquote>
+<p>Table: ES6 Import to CLJS Require<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<table>
+<thead>
+<tr>
+<th>ES6 Import</th>
+<th>CLJS Require</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>import defaultExport from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :default defaultExport])</td>
+</tr>
+<tr>
+<td>import * as name from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :as name])</td>
+</tr>
+<tr>
+<td>import { export } from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :refer (export)])</td>
+</tr>
+<tr>
+<td>import { export as alias } from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :rename {export alias}])</td>
+</tr>
+<tr>
+<td>import { export1 , export2 } from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :refer (export1 export2)])</td>
+</tr>
+<tr>
+<td>import { export1 , export2 as alias2 , […​] } from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :refer (export1) :rename {export2 alias2}])</td>
+</tr>
+<tr>
+<td>import defaultExport, { export [ , […​] ] } from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :refer (export) :default defaultExport])</td>
+</tr>
+<tr>
+<td>import defaultExport, * as name from &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo; :as name :default defaultExport])</td>
+</tr>
+<tr>
+<td>import &ldquo;module-name&rdquo;;</td>
+<td>(:require [&ldquo;module-name&rdquo;])</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>:default</code> option is currently only available in shadow-cljs, you can <a href="https://dev.clojure.org/jira/browse/CLJS-2376">vote here</a> to hopefully make it standard.
+You can always use <code>:as</code> alias and then call <code>alias/default</code> if you prefer to stay compatible with standard CLJS in the meantime.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://shadow-cljs.github.io/docs/UsersGuide.html#_using_npm_packages">https://shadow-cljs.github.io/docs/UsersGuide.html#_using_npm_packages</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
-    <header id='header' class='header-container'>
-      <div class='header site-header'>
-        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
-  <ul class='main-menu'>
-  <li>
-      <a class='current' aria-current='page' href='/'>Blog</a>
-    </li>
-  <li>
-      <a href='/about/'>About</a>
-    </li>
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">React-Native &amp; Clojurescript - Work with XCode <a href="/post/react-native-cljs-xcode/">#</a></h1>
+  <meta itemprop="headline" content="React-Native &amp; Clojurescript - Work with XCode" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">April 29, 2018</span></div>
+      <meta itemprop="dateModified" content="April 29, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <blockquote>
+<p>Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using <a href="http://shadow-cljs.org/">shadow-cljs</a>.</p>
+</blockquote>
+<p>There&rsquo;s no suprise that I would encounter issues with XCode. Here are the issues I managed to solve so far.</p>
+<h1 id="error-running-react-native-app-from-terminal-ios">Error running React Native app from terminal (iOS)</h1>
+<p>Entered the command <code>react-native ios</code>, and I would get the following error</p>
+<blockquote>
+<p>xcrun: error: unable to find utility &ldquo;instruments&rdquo;, not a developer tool or in PATH</p>
+<p>Command failed: xcrun instruments -s
+xcrun: error: unable to find utility &ldquo;instruments&rdquo;, not a developer tool or in PATH</p>
+</blockquote>
+<p>The solution could be found at <a href="https://stackoverflow.com/a/41022224">https://stackoverflow.com/a/41022224</a>.</p>
+<h1 id="iphone-keeps-rapidly-connecting-and-disconnecting-when-i-plug-it-into-my-macbook">Iphone keeps rapidly connecting and disconnecting when I plug it into my Macbook</h1>
+<p>Iphone kept beeping similar to this <a href="https://www.youtube.com/watch?v=q2v1Gh9EVMg">https://www.youtube.com/watch?v=q2v1Gh9EVMg</a>.</p>
+<p>For some reason, my phone needed to be 100% charge to connect to the Macbook successfully.</p>
+<h1 id="build-failed-when-run-on-real-device">Build failed when run on real device</h1>
+<p>I tried running the demo app on real device via XCode and I got the following error.</p>
+<blockquote>
+<p>Code Signing Error: Signing for &ldquo;FunanMobile&rdquo; requires a development team. Select a development team in the project editor.</p>
+<p>Code Signing Error: Code signing is required for product type &lsquo;Application&rsquo; in SDK &lsquo;iOS 11.2’</p>
+<p>Code Signing Error: Signing for &ldquo;FunanMobileTests&rdquo; requires a development team. Select a development team in the project editor.</p>
+<p>Code Signing Error: Code signing is required for product type &lsquo;Unit Test Bundle&rsquo; in SDK &lsquo;iOS 11.2&rsquo;</p>
+</blockquote>
+<p>Followed the instruction on <a href="https://stackoverflow.com/a/39524311">https://stackoverflow.com/a/39524311</a>, I had to register a developer account and chose the account in XCode for both normal and test build.</p>
+<h1 id="build-failed-after-update-xcode">Build failed after update XCode</h1>
+<p>Apple released a new version of XCode. I upgraded it and the build failed by complaining about <code>SDWebImage</code> module. <code>SWWebImage</code> should be the component imported by <code>react-native-fast-image</code>. I found some discussion at <a href="https://github.com/DylanVann/react-native-fast-image/issues/66">https://github.com/DylanVann/react-native-fast-image/issues/66</a>.</p>
+<p>&ldquo;Project &gt; Clean&rdquo; was the menu I needed. Just like other software, I just clean the (XCode)project when in doubt.</p>
+<h1 id="deploy-and-run-react-native-app-on-real-device-via-wifi">Deploy and run React Native app on real device via WIFI</h1>
+<p>Latest version of XCode and MacOS support &ldquo;network debugging&rdquo;. I followed the instruction in <a href="https://stackoverflow.com/questions/44382841/how-do-you-perform-wireless-debugging-in-xcode-9-with-ios-11-apple-tv-4k-etc">https://stackoverflow.com/questions/44382841/how-do-you-perform-wireless-debugging-in-xcode-9-with-ios-11-apple-tv-4k-etc</a> and was able to deploy and run the app. I didn&rsquo;t have to connect the phone via USB.</p>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">React-Native &amp; Clojurescript - Create a project with shadow-cljs <a href="/post/react-native-cljs-shadow-cljs/">#</a></h1>
+  <meta itemprop="headline" content="React-Native &amp; Clojurescript - Create a project with shadow-cljs" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">April 28, 2018</span></div>
+      <meta itemprop="dateModified" content="April 28, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <blockquote>
+<p>Disclaimer: This serie is my notes while I&rsquo;m exploring ReactNative and Clojurescript ecosystems. I&rsquo;ve never done any mobile development or anything related to XCode. I&rsquo;ve done some Clojurescript developments and this is my first time using <a href="http://shadow-cljs.org/">shadow-cljs</a>.</p>
+</blockquote>
+<h1 id="tldr">TLDR;</h1>
+<h3 id="create-the-project">Create the project</h3>
+<p>I installed <code>npm</code>, <code>yarn</code>, <code>react-native-cli</code>, <code>XCode</code>, <code>shadow-cljs</code>, and used the following commands to create the project.</p>
+<pre tabindex="0"><code>react-native init FunanMobile
+cd FunanMobile
+yarn add --dev shadow-cljs
+mkdir -p cljs/hello
+vim cljs/hello/core.cljs
+cat cljs/hello/core.cljs
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(<span style="color:#66d9ef">ns </span>hello.core)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">defn </span>foo []
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">js/alert</span> <span style="color:#e6db74">&#34;Hello from CLJS!&#34;</span>))
+</span></span></code></pre></div><pre tabindex="0"><code>mkdir js
+vim js/.babelrc
+cat js/.babelrc
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ignore&#34;</span>: [<span style="color:#e6db74">&#34;*.js&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><pre tabindex="0"><code>shadow-cljs init
+vim shadow-cljs.edn
+cat shadow-cljs.edn
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>{<span style="color:#e6db74">:source-paths</span>
+</span></span><span style="display:flex;"><span> [<span style="color:#e6db74">&#34;cljs&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">:dependencies</span>
+</span></span><span style="display:flex;"><span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">:builds</span>
+</span></span><span style="display:flex;"><span> {<span style="color:#e6db74">:app</span> {<span style="color:#e6db74">:target</span>     <span style="color:#e6db74">:npm-module</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">:runtime</span>    <span style="color:#e6db74">:react-native</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">:entries</span>    [hello.core]
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">:output-dir</span> <span style="color:#e6db74">&#34;js&#34;</span>}}}
+</span></span></code></pre></div><pre tabindex="0"><code>vim index.js
+cat index.js
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AppRegistry</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-native&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">App</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./App&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;./js/shadow.cljs.devtools.client.react_native&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">foo</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./js/hello.core&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">AppRegistry</span>.<span style="color:#a6e22e">registerComponent</span>(<span style="color:#e6db74">&#39;FunanMobile&#39;</span>, () =&gt; <span style="color:#a6e22e">App</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">foo</span>();
+</span></span></code></pre></div><h3 id="start-development">Start development</h3>
+<pre tabindex="0"><code>yarn shadow-cljs watch app
+react-native run-ios
+</code></pre><h1 id="why-shadow-cljs">Why shadow-cljs?</h1>
+<p>I tried <a href="https://github.com/drapanjanas/re-natal">re-natal</a> and it worked. However, the workflow around importing external components was frustrating.</p>
+<p>If I forgot to <code>require</code> the component, I had to re-run the tools to use the component in CLJS. I played around many different external components. Re-run the tools took most of my time while I should spend those time to do the work instead.</p>
+<p>Using shadow-cljs improved my workflow a lot:</p>
+<ul>
+<li>import external components? Follow documents of the component, re-run shadow-cljs, done.</li>
+<li>improved support of importing ES6 modules via <code>require</code></li>
+<li>start up faster than <code>lein</code></li>
+</ul>
+<p>The support for React Native of shadow-cljs is experimental. <code>Source map</code> isn&rsquo;t working and some other stuffs might also not work. However, I need only <code>hot reload</code> and <code>repl</code> in my project.</p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://facebook.github.io/react-native/docs/getting-started.html">https://facebook.github.io/react-native/docs/getting-started.html</a></li>
+<li><a href="http://cljsrn.org/">http://cljsrn.org/</a></li>
+<li><a href="https://github.com/drapanjanas/re-natal">https://github.com/drapanjanas/re-natal</a></li>
+<li><a href="https://github.com/gphilipp/react-native-with-clojurescript">https://github.com/gphilipp/react-native-with-clojurescript</a></li>
+<li><a href="https://github.com/thheller/shadow-cljs/issues/214#issuecomment-381237115">https://github.com/thheller/shadow-cljs/issues/214#issuecomment-381237115</a></li>
+<li><a href="https://github.com/idokutela/rum-native">https://github.com/idokutela/rum-native</a></li>
+<li><a href="https://github.com/DogLooksGood/shadow-cljs-with-react-native-note">https://github.com/DogLooksGood/shadow-cljs-with-react-native-note</a></li>
+</ul>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">401 vs 403 <a href="/post/401-vs-403/">#</a></h1>
+  <meta itemprop="headline" content="401 vs 403" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 26, 2017</span></div>
+      <meta itemprop="dateModified" content="November 26, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p><code>401 “Unauthorized”</code> really means unauthenticated. You need valid credentials for me to respond to this request.</p>
+<p><code>403 “Forbidden”</code> really means unauthorized. I understand your credentials, but sorry, you’re not allowed.</p>
+<p>Source <a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=FeSdFhsKGG0#t=394">https://www.youtube.com/watch?feature=player_detailpage&amp;v=FeSdFhsKGG0#t=394</a></p>
+<blockquote>
+<p>It seems the video is no longer available in Youtube :(</p>
+</blockquote>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Deal with Liferay Friendly URL Mapping <a href="/post/deal-with-liferay-friendly-url-mapping/">#</a></h1>
+  <meta itemprop="headline" content="Deal with Liferay Friendly URL Mapping" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 26, 2017</span></div>
+      <meta itemprop="dateModified" content="November 26, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Liferay has default url start with <code>/web</code>, <code>/group</code> and <code>/user</code> to identify if the page is public, private, or user’s private. The mappings can be changed by modify file <code>portal-ext.properties</code> and <code>ROOT/WEB-INF/web.xml</code>.</p>
+<p><strong>portal-ext.properties</strong>
+<img src="/images/2017-11-26-deal-with-liferay-friendly-url-mapping-1.png" alt="portal-ext.properties"></p>
+<blockquote>
+<p>Note: <code>company.default.home.url</code> is set so that Liferay won’t try to open url <code>/web/guest</code> on startup.</p>
+</blockquote>
+<p><strong>ROOT/WEB-INF/web.xml</strong>
+<img src="/images/2017-11-26-deal-with-liferay-friendly-url-mapping-2.png" alt="ROOT/WEB-INF/web.xml"></p>
+<p>I’ve got weird error after edit web.xml and Liferay startup with errors. Try to delete <code>temp</code> and <code>work</code> folder of tomcat help resolve this issue.</p>
+<p>Above changes were tested on Liferay 6.2.</p>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Git - working with deleted files <a href="/post/git-working-with-deleted-files/">#</a></h1>
+  <meta itemprop="headline" content="Git - working with deleted files" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 26, 2017</span></div>
+      <meta itemprop="dateModified" content="November 26, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Scenario: you notice that a file is deleted and you want to recover it.</p>
+<h2 id="find-which-commit-delete-thefile">Find which commit delete the file</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log -- docroot/user_bars/logo.png   <span style="color:#75715e"># show all changes of a file, work even if the file is deleted  </span>
+</span></span><span style="display:flex;"><span>git log -1 -- docroot/user_bars/logo.png <span style="color:#75715e"># limit the output of Git log to the last commit, i.e. the commit which delete the file; -1 to see only the last commit, use -2 to see the last 2 commits etc...</span>
+</span></span></code></pre></div><h2 id="restore-thefile">Restore the file</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout f5ac172e docroot/user_bars/logo.png <span style="color:#75715e"># warn: this will discard all changes in working directory</span>
+</span></span></code></pre></div><p>If there are many revisions, you can view content of the file in a specific revision by the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git show f5ac172e docroot/user_bars/logo.png
+</span></span></code></pre></div>
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Hell with Java Autobox or Why not use instanceof <a href="/post/hell-with-java-autobox-or-why-not-use-instanceof/">#</a></h1>
+  <meta itemprop="headline" content="Hell with Java Autobox or Why not use instanceof" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 26, 2017</span></div>
+      <meta itemprop="dateModified" content="November 26, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>I spent few days debugging problem; the following code not work</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">long</span><span style="color:#f92672">[]</span> organizationIds <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">long</span><span style="color:#f92672">[</span>organizations<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()];</span>
+</span></span><span style="display:flex;"><span>userParams<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>usersGroups<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">,</span> organizationIds<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>but this worked</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Long<span style="color:#f92672">[]</span> organizationIds <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Long<span style="color:#f92672">[</span>organizations<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()];</span>
+</span></span></code></pre></div><p>why? there’s code check snippet along the line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>params<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>usersGroups<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">instanceof</span> Long<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Although compiler will allow use <code>long</code> instead of <code>Long</code> and vice visa via autobox, it doesn&rsquo;t happen with <code>instanceof</code> operator.</p>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">HTML Anchor &lt;a&gt; - target attribute <a href="/post/html-anchor-target-attribute/">#</a></h1>
+  <meta itemprop="headline" content="HTML Anchor &lt;a&gt; - target attribute" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 26, 2017</span></div>
+      <meta itemprop="dateModified" content="November 26, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p><a href="http://stackoverflow.com/a/8867079">http://stackoverflow.com/a/8867079</a></p>
+<p>Using <code>target=”_blank”</code> will instruct the browser to create a new browser tab or window when the user clicks on the link.</p>
+<p>Using <code>target=”_new”</code> is technically invalid according to the specifications, but as far as I know every browser will behave the same way:</p>
+<ul>
+<li>it will search for a tab or window with the context name “_new”</li>
+<li>if a “_new” tab/window is found, then the URL is loaded into it</li>
+<li>if it’s not found, a new tab/window is created with the context name “_new”, and the URL loaded into it</li>
+</ul>
+<p>Note <code>target=”_new”</code> will behave exactly the same as <code>target=”new”</code>, and the latter is valid HTML while the former is invalid HTML.</p>
+<p>Adding some confusion to this, in HTML4 the target attribute was deprecated. In HTML5 this decision was reversed, and it is an official part of the spec once again. All browsers support target no matter what version of HTML you are using, but some validators will flag the use as deprecated if your doctype is HTML4.</p>
+<hr>
+<p><a href="http://www.w3.org/TR/html4/types.html#type-frame-target">http://www.w3.org/TR/html4/types.html#type-frame-target</a></p>
+<p>The following target names are reserved and have special meanings.</p>
+<ul>
+<li><code>_blank</code> The user agent should load the designated document in a new, unnamed window.</li>
+<li><code>_self</code> The user agent should load the document in the same frame as the element that refers to this target.</li>
+<li><code>_parent</code> The user agent should load the document into the immediate FRAMESET parent of the current frame. This value is equivalent to _self if the current frame has no parent.</li>
+<li><code>_top</code> The user agent should load the document into the full, original window (thus canceling all other frames). This value is equivalent to _self if the current frame has no parent.</li>
+</ul>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Naming Convention <a href="/post/naming-convention/">#</a></h1>
+  <meta itemprop="headline" content="Naming Convention" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 26, 2017</span></div>
+      <meta itemprop="dateModified" content="November 26, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <h2 id="as">as… </h2>
+<p>for explicit coercion method</p>
+<blockquote>
+<p>Ex: as.numeric(x)</p>
+</blockquote>
+<h2 id="heading">…? </h2>
+<p>for condition method. use <code>is…</code> or <code>has…</code> if the programming langauge doesn’t allow ? character.</p>
+<blockquote>
+<p>Ex: (collection? x)</p>
+</blockquote>
+<h2 id="maybe">maybe… </h2>
+<p>for doing something if arguments are not nil</p>
+<blockquote>
+<p>Ex: (maybe-substitute header)</p>
+</blockquote>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Sum Type/Union Type <a href="/post/sum-type-or-union-type/">#</a></h1>
+  <meta itemprop="headline" content="Sum Type/Union Type" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 26, 2017</span></div>
+      <meta itemprop="dateModified" content="November 26, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <h2 id="in-java">In Java</h2>
+<p>Use abstract class.</p>
+<p>See <a href="http://stackoverflow.com/questions/9975836/howto-simulate-haskells-either-a-b-in-java">http://stackoverflow.com/questions/9975836/howto-simulate-haskells-either-a-b-in-java</a></p>
+<h2 id="in-clojure">In Clojure</h2>
+<p>Use vector. <code>[:left …]</code> and <code>[:right ..]</code> to model either type.</p>
+<p>I can pattern match on first element in the vector.</p>
+<h2 id="in-haskell">In Haskell</h2>
+<p>Use algebraic data types.</p>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">How to use boot-clj and nREPL with Docker <a href="/post/how-to-use-boot-clj-and-nrepl-with-docker/">#</a></h1>
+  <meta itemprop="headline" content="How to use boot-clj and nREPL with Docker" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">April 20, 2017</span></div>
+      <meta itemprop="dateModified" content="April 20, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>There&rsquo;s a great post about <a href="http://blog.dominic.io/vagrant-docker-and-clojure/">using clojure with docker.</a> I followed the post with a twist. I used <code>boot-alpine</code> image[<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>] and <code>docker-compose</code> instead of <code>Vagrant</code>.</p>
+<p>Here&rsquo;s the final configuration that worked.</p>
+<pre tabindex="0"><code># file docker-compose.yml
+version: &#39;2&#39;
+services:
+  bootclj:
+    command: boot dev
+    image: clojure:boot-alpine
+    ports:
+      - 9007:9007
+      - 9009:9009
+      - 9011:9011
+      - 3000:3000
+    volumes_from:
+      - m2
+    working_dir: /opt/src
+  m2:
+    command: echo &#34;m2 container ready!&#34;
+    image: alpine
+    volumes:
+      - /root/.m2
+      - ./:/opt/src
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span><span style="color:#75715e">; file build.boot</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">deftask</span> development []
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">task-options!</span>
+</span></span><span style="display:flex;"><span>    cljs {<span style="color:#e6db74">:optimizations</span>    <span style="color:#e6db74">:none</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">:source-map</span>       true
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">:compiler-options</span> {<span style="color:#e6db74">:devcards</span> true}}
+</span></span><span style="display:flex;"><span>    start-repl {<span style="color:#e6db74">:ip</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9007</span>}
+</span></span><span style="display:flex;"><span>    cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}
+</span></span><span style="display:flex;"><span>    reload {<span style="color:#e6db74">:on-jsload</span> <span style="color:#e6db74">&#39;timer.app/reload</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">:port</span>      <span style="color:#ae81ff">9011</span>}
+</span></span><span style="display:flex;"><span>    serve {<span style="color:#e6db74">:port</span> <span style="color:#ae81ff">3000</span>})
+</span></span><span style="display:flex;"><span>  identity)
+</span></span></code></pre></div><h2 id="challenges-i-faced">Challenges I faced</h2>
+<p>Being a beginner in both boot-clj and Docker, I bumped into the following issues.</p>
+<h3 id="i-couldnt-connect-to-nrepl-running-in-docker2">I couldn&rsquo;t connect to nREPL running in Docker[<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>].</h3>
+<p>I got the following error when I used Cursive remote repl to connect.</p>
+<pre tabindex="0"><code>Connecting to remote nREPL server...
+Error connecting to localhost:9009 - class java.net.ConnectException: Connection refused
+</code></pre><p>By going through document and looking at the source code[<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>], I found out that I need to run two tasks to have browser repl working. The task <code>cljs-repl</code> starts a repl server and the task <code>start-repl</code> connects the repl server to browser.</p>
+<p>The repl server listens to loopback interface[<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>] by default. I used the <code>bind</code> nrepl option to override this setting like the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>cljs-repl {<span style="color:#e6db74">:nrepl-opts</span> {<span style="color:#e6db74">:bind</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span> <span style="color:#e6db74">:port</span> <span style="color:#ae81ff">9009</span>}}
+</span></span></code></pre></div><h3 id="boot-downloaded-dependencies-everytime-i-rebuilt-docker-images">Boot downloaded dependencies everytime I rebuilt docker images.</h3>
+<p>I used data container to store <code>.m2</code> repositories. I just use the following command to rebuild and start the image:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose stop bootclj 
+</span></span><span style="display:flex;"><span>docker-compose rm bootclj
+</span></span><span style="display:flex;"><span>docker-compose create bootclj
+</span></span><span style="display:flex;"><span>docker-compose start bootclj
+</span></span></code></pre></div><hr>
+<p>Footnote:</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>1: <a href="https://hub.docker.com/_/clojure/">link to official Docker image for Clojure</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>2: <code>adzerk/boot-cljs-repl</code> version <code>0.3.3</code> is used in this post&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>3: <a href="https://github.com/adzerk-oss/boot-cljs-repl/blob/master/src/adzerk/boot_cljs_repl.clj#L204">boot_cljs_repl.clj</a> and <a href="https://github.com/boot-clj/boot/blob/2.6.0/boot/core/src/boot/task/built_in.clj#L371">built_in.clj</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>4: <a href="https://clojure.org/reference/repl_and_main#_launching_a_socket_server">https://clojure.org/reference/repl_and_main#_launching_a_socket_server</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Challenges - Java Flame Graphs Introduction: Fire For Everyone! <a href="/post/challenges-java-flame-graphs-introduction/">#</a></h1>
+  <meta itemprop="headline" content="Challenges - Java Flame Graphs Introduction: Fire For Everyone!" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">April 16, 2017</span></div>
+      <meta itemprop="dateModified" content="April 16, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>I&rsquo;ve got interested into flame graph and gone through an excellent post <a href="http://psy-lob-saw.blogspot.com/2017/02/flamegraphs-intro-fire-for-everyone.html">Java Flame Graphs Introduction: Fire For Everyone!</a></p>
+<p>I tried the following script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..100<span style="color:#f92672">}</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  jstack &lt;pid&gt; &gt;&gt; iloveoldshit.jstk;
+</span></span><span style="display:flex;"><span>  sleep 0.1;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>cat iloveoldshit.jstk | ./stackcollapse-jstack.pl | ./flamegraph.pl --color<span style="color:#f92672">=</span>green &gt; jstack-flames.svg
+</span></span></code></pre></div><p>and get the following error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ERROR: No stack counts found
+</span></span></code></pre></div><p>Being a beginner, I don&rsquo;t know what happened. So I decided to go through source code. It turned out that <code>stackcollapse-jstack.pl</code> filter out some stacks[<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>] with names like:</p>
+<ul>
+<li>C. CompilerThread</li>
+<li>Signal Dispatcher</li>
+<li>Service Thread</li>
+<li>Attach Listener</li>
+<li>epollWait</li>
+<li>socketAccept</li>
+<li>Socket.*accept0</li>
+<li>socketRead0</li>
+</ul>
+<p>I run jstack against an idle tomcat. The dump was full of stacks that get filtered out by the script and <code>stackcollapse-jstack.pl</code> returned an empty output.</p>
+<p>I managed to get it working by running jstack against a tomcat that&rsquo;s handling requests.</p>
+<hr>
+<p>Footnote</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>1:<a href="https://github.com/brendangregg/FlameGraph/blob/master/stackcollapse-jstack.pl#L128">https://github.com/brendangregg/FlameGraph/blob/master/stackcollapse-jstack.pl#L128</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Books I Read (2016) <a href="/post/books-i-read-2016/">#</a></h1>
+  <meta itemprop="headline" content="Books I Read (2016)" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">December 31, 2016</span></div>
+      <meta itemprop="dateModified" content="December 31, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <h2 id="november">November</h2>
+<ul>
+<li>The Phoenix Project</li>
+</ul>
+<h2 id="december">December</h2>
+<ul>
+<li>The Power of Now - A guide to spiritual enlightenment</li>
+<li>Are Your Lights On? - How to Know What The Problem Really Is</li>
+</ul>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Weekly Roundup 2016/12/24 <a href="/post/weekly-roundup-2016-12-24/">#</a></h1>
+  <meta itemprop="headline" content="Weekly Roundup 2016/12/24" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">December 24, 2016</span></div>
+      <meta itemprop="dateModified" content="December 24, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <h2 id="books">Books</h2>
+<ul>
+<li>The Power of Now: Chapter 2</li>
+<li>Are your lights on? Chapter 9</li>
+</ul>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Weekly Roundup 2016/12/03 <a href="/post/weekly-roundup-2016-12-03/">#</a></h1>
+  <meta itemprop="headline" content="Weekly Roundup 2016/12/03" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">December 3, 2016</span></div>
+      <meta itemprop="dateModified" content="December 3, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>It&rsquo;s been a procrastinated week. I have to pick myself up and get jobs done next week.</p>
+<h2 id="books">Books</h2>
+<ul>
+<li>The Power of Now: Chapter 1</li>
+</ul>
+<h2 id="projects">Projects</h2>
+<ul>
+<li>Learn to build custom text editor</li>
+</ul>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Weekly Roundup 2016/11/27 <a href="/post/weekly-roundup-2016-11-27/">#</a></h1>
+  <meta itemprop="headline" content="Weekly Roundup 2016/11/27" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 27, 2016</span></div>
+      <meta itemprop="dateModified" content="November 27, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>I&rsquo;m working on how the weekly roundup should look like. At first glance, it should be the following format.</p>
+<h2 id="books">Books</h2>
+<p>TODO</p>
+<h2 id="projects">Projects</h2>
+<p>TODO</p>
+
+  </div>
+</article>
+</li>
+  
+    
+    
+      <li class=""><article
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="Darong Mean" />
+  <meta itemprop="publisher" content="Darong Mean" />
+  <meta itemprop="image" content="https://darongmean.com/images/avatar@2x.png" />
+  <h1 itemprop="name" id="title">Weekly Roundup 2016/11/19 <a href="/post/weekly-roundup-2016-11-19/">#</a></h1>
+  <meta itemprop="headline" content="Weekly Roundup 2016/11/19" />
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">November 19, 2016</span></div>
+      <meta itemprop="dateModified" content="November 19, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <ul>
+<li><a href="http://news.bitofnews.com/forget-to-do-lists-what-you-really-need-are-not-to-do-lists/">Forget To-Do Lists, What You Really Need Are Anti-To-Do Lists</a></li>
+</ul>
+<blockquote>
+<p>When researching 11 companies that suddenly went from average to outstanding, Jobs found that the single binding factor between them was the shift in exactly how big decisions were made. The strategy became what not to do rather than what to do.</p>
+</blockquote>
+<ul>
+<li><a href="http://martinfowler.com/bliki/BeckDesignRules.html">BeckDesignRules</a></li>
+</ul>
+<blockquote>
+<p>Kent Beck came up with his four rules of simple design while he was developing ExtremeProgramming in the late 1990&rsquo;s. I express them like this.</p>
+<ul>
+<li>Passes the tests</li>
+<li>Reveals intention</li>
+<li>No duplication</li>
+<li>Fewest elements</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><a href="http://blog.podsnap.com/reductio.html">Know when to fold &rsquo;em: visualizing the streaming, concurrent reduce</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/javascript-scene/why-deadlines-need-to-drop-dead-321739ae6be1#.jx8tsre6u">Why Deadlines Need to Drop Dead</a></p>
+</li>
+</ul>
+<blockquote>
+<p>The best way to manage marketing calendars is to set   your marketing hype cycle one cycle behind your development cycle.</p>
+<p>Market only finished products: No missed deadlines. No cut corners. No exploding products. No bad press.</p>
+<p>How do you answer &ldquo;When will it ship?&rdquo;
+&ldquo;When it&rsquo;s done.&rdquo;</p>
+<p>Instead of “When will it ship?” the new questions are “what did we ship this week, and how do we want to market it?” Do you hold the new features behind a feature flag system and wait for a marketing calendar event to roll them out to the masses? Do you enable the features right away?</p>
+</blockquote>
+<ul>
+<li><a href="https://davidcel.is/posts/stop-validating-email-addresses-with-regex/">Stop Validating Email Addresses With Regex</a></li>
+</ul>
+<blockquote>
+<p>Just send them an email already</p>
+</blockquote>
+
+  </div>
+</article>
+</li>
+  
+    
   
   </ul>
-</nav>
 
-        <div class='header-info'>
-          
-          <h1 class='site-title title'>Darong Mean</h1>
-          
-          <p class='site-description subtitle'>Programmer - (Procrastinating) Blogger - (Casual) Gamer</p>
-        </div>
-      </div>
-    </header>
+  <style type="text/css">
+	.content-container-narrow-pad {
+		margin-bottom: 5em;
+	}
+</style>
 
-
-<main id='main' class='main'>
   
 
-  <div class='home-sections-container'>
-    <div class='home-sections'><section id='recent-posts' class='home-section'>
-  <header>
-    <h2 class='home-section-title title'>Recent Posts</h2>
-  </header>
-
-  <div class='list-container'>
-    <ul class='list'>
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2018-04-30T00:00:00Z'>2018, Apr 30</time>
-</span>
-
+  <div class="content-container vertical-margins">
+    <div class="flex-row flex-center">
+      <footer class="footer">
+      <span>© 2016-2022 <a href="/">Darong Mean</a></span>
+      <span>Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &amp;
+        <a href="https://github.com/capnfabs/paperesque" rel="noopener" target="_blank">paperesque</a>
+      </span>
+      </footer>
     </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/react-native-cljs-es6-import-export/'>React-Native &amp; Clojurescript - ES6 Import/Export</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2018-04-29T00:00:00Z'>2018, Apr 29</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/react-native-cljs-xcode/'>React-Native &amp; Clojurescript - Work with XCode</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2018-04-28T00:00:00Z'>2018, Apr 28</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/react-native-cljs-shadow-cljs/'>React-Native &amp; Clojurescript - Create a project with shadow-cljs</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/401-vs-403/'>401 vs 403</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/deal-with-liferay-friendly-url-mapping/'>Deal with Liferay Friendly URL Mapping</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/git-working-with-deleted-files/'>Git - working with deleted files</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/html-anchor-target-attribute/'>HTML Anchor &lt;a&gt; - target attribute</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/hell-with-java-autobox-or-why-not-use-instanceof/'>Hell with Java Autobox or Why not use instanceof</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/naming-convention/'>Naming Convention</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-26T00:00:00Z'>2017, Nov 26</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/sum-type-or-union-type/'>Sum Type/Union Type</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-20T00:00:00Z'>2017, Apr 20</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/how-to-use-boot-clj-and-nrepl-with-docker/'>How to use boot-clj and nREPL with Docker</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-04-16T00:00:00Z'>2017, Apr 16</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/challenges-java-flame-graphs-introduction/'>Challenges - Java Flame Graphs Introduction: Fire For Everyone!</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-31T00:00:00Z'>2016, Dec 31</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/books-i-read-2016/'>Books I Read (2016)</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-24T00:00:00Z'>2016, Dec 24</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-24/'>Weekly Roundup 2016/12/24</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-12-03T00:00:00Z'>2016, Dec 03</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-12-03/'>Weekly Roundup 2016/12/03</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-27T00:00:00Z'>2016, Nov 27</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-27/'>Weekly Roundup 2016/11/27</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2016-11-19T00:00:00Z'>2016, Nov 19</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/weekly-roundup-2016-11-19/'>Weekly Roundup 2016/11/19</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-    </ul>
   </div>
-</section>
-</div>
-  </div>
-</main>
-
-    <footer id='footer' class='footer-container'>
-      <div class='footer'>
-        <div class='social-menu-container'>
-  <nav aria-label='Social Menu'>
-    <ul class='social-menu'><li>
-        <a href='https://github.com/darongmean' target='_blank' rel='noopener'>
-          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-  
-</svg>
-</a>
-      </li><li>
-        <a href='https://twitter.com/darong_mean' target='_blank' rel='noopener'>
-          <span class='screen-reader'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-  
-</svg>
-</a>
-      </li><li>
-        <a href='https://linkedin.com/in/darongm' target='_blank' rel='noopener'>
-          <span class='screen-reader'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
-  
-</svg>
-</a>
-      </li></ul>
-  </nav>
-</div>
-        <div class='copyright'>
-  <p>
-        
-          
-        
-      
-
-       &copy; 2016-2018 Darong Mean 
-  </p>
-</div>
-
-      </div>
-    </footer>
-
-  </div><script src='/assets/js/main.5871befd.js'></script></body>
-
+  </body>
+  <script type="module" src="https://cdn.skypack.dev/pin/@hotwired/turbo@v7.2.4-ZifPufG8LWXS2LFpHP7B/mode=imports,min/optimized/@hotwired/turbo.js"></script>
 </html>
-
